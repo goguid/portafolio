@@ -1,0 +1,3045 @@
+# Modelo de Oportunidad CDN
+
+## Release Notes
+<body>
+
+**Planes SDA en Desarrollo**
+
+* PLA_COMER_TASK_BBDD_VENTAS_CN_12122017_47
+* PLA_COMER_TASK_BBDD_VENTAS_CN_12122017_52
+
+**Manejo de ramas BD VENTA_CN**
+
+* Rama de Desarrollo : develop
+* Rama de QA : release
+* Rama de Produccion: master
+
+**Ultimo Tag para Rollback Estable en produccion:** 5.11.0-1.2
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Version</th>
+            <th>Descripcion</th>
+            <th>Depende de</th>
+            <th>Puede pasar apagado?</th>
+            <th>Fecha Release</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+          <td>5.36.0-1.1</td>
+          <td>LCN-15287: Cuenta FAN Emprende PJ</td>
+          <td></td>
+          <td></td>
+          <td>01/2023</td>
+      </tr>
+    <tr>
+          <td>5.35.0-1.3</td>
+          <td>LCN-15209: Tarjeta de Crédito Digital - Firma apoderado</td>
+          <td></td>
+          <td></td>
+          <td>12/2022</td>
+      </tr>
+        <tr>
+            <td>5.34.0-1.3</td>
+            <td>BPM Task: Flujo BPM Crédito especial Armada : Story AP-88299 : Task AP-88464</td>
+            <td></td>
+            <td></td>
+            <td>12/2022</td>
+        </tr>
+        <tr>
+            <td>5.33.0-1.1</td>
+            <td>BPM Task: Bca Propia No se asigna correctamente campo banca Null Flujo RIESGO: Story APC-24507 : Task APC-24508</td>
+            <td></td>
+            <td></td>
+            <td>12/2022</td>
+        </tr>
+        <tr>
+            <td>5.32.0-1.1</td>
+            <td>BPM Task: Agrega reglas para crédito consumo Preaprobado: Story APC-24516 : Task APC-24534</td>
+            <td></td>
+            <td></td>
+            <td>12/2022</td>
+        </tr>
+        <tr>
+            <td>5.31.0-2.8</td>
+            <td>BPM Task: Correccion: Quitar regla cuando el cliente es PEP: Story APC-24183 : Task APC-24401</td>
+            <td></td>
+            <td></td>
+            <td>12/2022</td>
+        </tr>
+        <tr>
+            <td>5.30.0-1.1</td>
+            <td>LCN-14953: Cuenta Fan Emprende - Duplicidad de oportunidades en bandeja de abogados</td>
+            <td></td>
+            <td></td>
+            <td>11/2022</td>
+        </tr>
+        <tr>
+            <td>5.29.0-1.5</td>
+            <td>LNC-14870: Cuenta Corriente Digital Empresas - Creación nuevas tablas aprobación en base de datos</td>
+            <td></td>
+            <td></td>
+            <td>11/2022</td>
+        </tr>
+        <tr>
+            <td>5.28.0-1.1</td>
+            <td>BPM Task: Quitar patrocinio cuando es alzamiento garantia de cliente PEP : Story APC-24183 : Task APC-24401</td>
+            <td></td>
+            <td></td>
+            <td>11/2022</td>
+        </tr>
+    	<tr>
+            <td>5.27.0-1.1</td>
+            <td>BPM Task: Firma en Sucursal Diferente - Visado de Oportunidad en Sucursal Diferente : Story AP-87421 : Task AP-88169</td>
+            <td></td>
+            <td></td>
+            <td>11/2022</td>
+        </tr>
+    	<tr>
+            <td>5.26.0-2.2</td>
+            <td>BPM Task: Oportunidad Firmada en Banconexion salta visado y pasa curse : Story EM-986 : Task EM-999</td>
+            <td></td>
+            <td></td>
+            <td>10/2022</td>
+        </tr>
+        <tr>
+            <td>5.25.0-1.3</td>
+            <td>LCN-14791-LCN-14785 - Se agrega parametro "esLimitada" a bandeja de abogados </td>
+            <td></td>
+            <td></td>
+            <td>10/2022</td>
+        </tr>
+        <tr>
+            <td>5.24.0-1.5</td>
+            <td>Migración de servicios ON Line de Siebel al nuevo modelo de Centro de Negocios - EM-334</td>
+            <td></td>
+            <td></td>
+            <td>10/2022</td>
+        </tr>
+        <tr>
+            <td>5.23.0-1.4</td>
+            <td>Agrega campo y filtro sucursal firma documentos en SP_OPORT_REPORTE_TITULO_EJEC - BPM_OPORTUNIDAD_VIEW AP-87422</td>
+            <td></td>
+            <td></td>
+            <td>10/2022</td>
+        </tr>
+        <tr>
+            <td>5.22.0-1.3</td>
+            <td>Se modifica SP SP_BUSCAR_ID_DOCUMENTO para obtener contrato Nuevas TC Digital y nombre contrato CTAFAN_CLAN - LCN-14647  - LCN-14653</td>
+            <td></td>
+            <td></td>
+            <td>09/2022</td>
+        </tr>
+        <tr>
+            <td>5.21.0-1.1</td>
+            <td>BPM Task: Firma en Sucursal Diferente - Visado de Oportunidad en Sucursal Diferente :Story AP-87421 :Task AP-87772</td>
+            <td></td>
+            <td></td>
+            <td>09/2022</td>
+        </tr>
+        <tr>
+            <td>5.20.0-1.2</td>
+            <td>SP_VNT_OBTENER_OPORT_CREDITO,creado por navila.accenture@bancochile.cl </td>
+        <td></td>
+        <td></td>
+            <td>05/2022</td>
+        </tr>
+        <tr>
+            <td>5.19.0-1.1</td>
+            <td>BPM Task: Creación de SP : Story  APC-15045: Task APC-16236</td>           
+        <td></td>
+        <td></td>
+            <td>04/2022</td>
+        </tr>
+        <tr>
+            <td>5.18.0-1.1</td>
+            <td>BPM Task: Problema Avanzar tarea Empresas : Story APC-23814 : Task APC-23825</td>
+        <td></td>
+        <td></td>
+            <td>08/2022</td>
+        </tr>
+        <tr>
+            <td>5.17.0-2.3</td>
+            <td>BPM Task: Creación de reglas para ejecutivo Relacionado 994 : Task EM-788 : Task EM-807</td>
+        <td></td>
+        <td></td>
+            <td>07/2022</td>
+        </tr>
+        <tr>
+            <td>5.16.0-2.1</td>
+            <td>BPM Task: Modificar BPM para visado : Story EM-784 : Task EM-790</td>
+        <td></td>
+        <td></td>
+            <td>07/2022</td>
+        </tr>
+        <tr>
+            <td>5.15.0-1.2.X</td>
+            <td>Se crea indice IDX_OPERACION_FECHA_OPOR_TA_V2 para la tabla BPM_OPERACIONES y se crea indice TAREA_FECHAINICIO_INDEX_V2 para la tabla BPM_TAREAS para la historia AP-47369</td>            
+        <td></td>
+        <td></td>
+            <td>04/2022</td>
+        </tr>
+        <tr>
+            <td>5.14.0-1.1</td>
+            <td>Se crea sp para agregar datos adicionales de Digipass a oportunidades</td>
+        <td></td>
+        <td></td>
+            <td>07/2022</td>
+        </tr>
+        <tr>
+            <td>5.13.0-1.1</td>
+            <td>BPM Task: Revisión error orden de tareas : Story APC-22750 : Task APC-22946</td>
+        <td></td>
+        <td></td>
+            <td>07/2022</td>
+        </tr>
+        <tr>
+            <td>5.12.0-2.4</td>
+            <td>BPM Task: Revisión escalamiento flujo mecanizado ARMADA: Story APC-24436 : Task APC-24439</td>
+            <td></td>
+            <td></td>
+            <td>12/2022</td>
+        </tr>
+    	<tr>
+            <td>5.11.0-1.2</td>
+            <td>Se corrige utilizacion de campo in_mensaje en SP_BPM_ACTUALIZA_DATOS_PREVIS y SP_BPM_EMP_ACT_DATOS_PREVIS APC-24079</td>
+            <td></td>
+            <td></td>
+            <td>12/2022</td>
+        </tr>
+        <tr>
+            <td>5.10.0-2.5</td>
+            <td>BPM Task: Bca Propia No se asigna correctamente campo banca Null : Story APC-24374 : Task APC-24376</td>
+            <td></td>
+            <td></td>
+            <td>12/2022</td>
+        </tr>
+        <tr>
+            <td>5.9.0-2.6</td>            
+            <td>BPM Task: Creación de flujo de Ida y avanzar tarea BPM : Story EM-619 / EM-620 : Task EM-645 / EM-644</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    	<tr>
+            <td>5.8.0-1.1</td>
+            <td>BPM Task: Corrección de flujo visado en Curse FOGAIN : Story APC-24429 : Task APC-24431</td>
+            <td></td>
+            <td></td>
+            <td>11/2022</td>
+        </tr>
+    	<tr>
+            <td>5.7.0-1.4</td>
+            <td>BPM Task: Desarrollar mejora consistencia flujo - previsado empresa : Story APC-24078 : Task APC-24227</td>
+            <td></td>
+            <td></td>
+            <td>11/2022</td>
+        </tr>
+       	<tr>
+            <td>5.6.0-1.1</td>
+            <td>BPM Task: Desarrollar mejora consistencia flujo - previsado persona : Story APC-24078 : Task APC-24227</td>
+            <td></td>
+            <td></td>
+            <td>11/2022</td>
+        </tr>
+        <tr>
+            <td>5.5.0-2.24</td>
+            <td>BPM Task: Análisis logs nodos y servicio de análisis : Story APC-24300 : Task APC-24337</td>
+            <td></td>
+            <td></td>
+            <td>11/2022</td>
+        </tr>
+        <tr>
+            <td>5.4.0-1.1</td>
+            <td>APC-24341 SP_BPM_AGREGA_COMENTARIO Se agrega validación para agregar comentario en tarea cerrada cuando campo comentario tiene algun caracter y es distinto de null</td>
+			<td></td>
+			<td></td>
+            <td>11/2022</td>
+        </tr>
+        <tr>
+            <td>5.3.0-2.1</td>
+            <td>BPM Task: Análisis problematica de la incidencia - marca inicio proceso : Story APC-24392 : Task APC-24403</td>
+            <td></td>
+            <td></td>
+            <td>11/2022</td>
+        </tr>
+         <tr>
+            <td>5.2.0-1.5</td>
+            <td>BPM Task: Crear nuevas tarjetas de credito digital en flujo existente: Story:LCN-14941 Task:LCN-15020</td>
+            <td></td>
+            <td></td>
+            <td>11/2022</td>
+            </tr>
+            <td>5.1.0-1.1</td>
+            <td>Se genera nuevo SP basado en SP_BPM_EMP_CREA_OPORTUNIDAD y se agrega nuevo parametro de entrada in_cliente. - APC-24425</td>
+            <td></td>
+            <td></td>
+            <td>11/2022</td>
+       </tr>
+       <tr>
+            <td>5.0.0-1.1</td>
+            <td> Se genera nuevo SP basado en SP_BPM_CREA_OPORTUNIDAD y se agrega nuevo parametro de entrada in_cliente - APC-24365</td>
+            <td></td>
+            <td></td>
+            <td>11/2022</td>
+        </tr>
+        <tr>
+            <td>4.99.0-1.1</td>
+            <td>BPM Task: Error al aprobar oportunidad en tarea Revisar apelacion a comite: Task CIP-3923</td>
+            <td></td>
+            <td></td>
+            <td>10/2022</td>
+        </tr>
+        <tr>
+            <td>4.98.0-1.1</td>
+            <td>BPM Task: Eliminar Autorizaciones -Evaluar Apelación Comercial- al avanzar multiproductos Story CIP-3775 : Task CIP-3898</td>
+            <td></td>
+            <td></td>
+            <td>09/2022</td>
+        </tr>
+        <tr>
+            <td>4.97.0-1.1</td>
+            <td>BPM Task: BPM - Autorizacion duplicadas en flujo de apelacion comercial y riesgo : Story CIP-3775 : Task CIP-3842</td>
+            <td></td>
+            <td></td>
+            <td>09/2022</td>
+        </tr>
+        <tr>
+            <td>4.96.0-1.1</td>
+            <td>BPM Task: Flujo OFAC y PEP BPM - Venta Empresa : Task CIP-3195 : Task CIP-3193 : tipos autorizacion</td>
+            <td></td>
+            <td></td>
+            <td>05/2022</td>
+        </tr>
+        <tr>
+            <td>4.95.1-1.1</td>
+            <td>CIP-3957 Anulacion de oportunidades sin tareas</td>
+            <td></td>
+            <td></td>
+            <td>10/2022</td>
+        </tr>
+       	<tr>
+            <td>4.95.0-1.2</td>
+            <td>BPM Task: Ajuste Flujo BPM CRECONS: Story AP-87698 : Task AP-87942</td>
+            <td></td>
+            <td></td>
+            <td>10/2022</td>
+        </tr>
+        <tr>
+            <td>4.94.0-1.2</td>
+            <td>BPM Task: Nuevo grupo para visado crédito armada: Story APC-24095 : Task APC-24226</td>
+            <td></td>
+            <td></td>
+            <td>10/2022</td>
+        </tr>
+        <tr>
+            <td>4.93.0-1.1</td>
+            <td>BPM Task: Oportunidades 3s en bandeja de visado centralizado CDN - Persona: Story APC-24143 : Task APC-24180 </td>
+			<td></td>
+			<td></td>
+            <td>09/2022</td>
+        </tr>
+        <tr>
+            <td>4.92.0-1.1</td>
+            <td>BPM Task: Oportunidad 3S pasa a equipo de Riesgo para evaluar - Persona: Story APC-24057 : Task APC-24167 </td>
+			<td></td>
+			<td></td>
+            <td>09/2022</td>
+        </tr>
+    	<tr>
+            <td>4.91.0-1.5</td>
+            <td>BPM Task: Integrar nuevas tarjetas de credito digital personas - Persona: Story LCN-14508 : Task LCN-14712</td>
+			<td></td>
+			<td></td>
+            <td>09/2022</td>
+        </tr>
+        <tr>
+            <td>4.90.1-1.3</td>
+            <td>Se agrega nuevo campo ID_COP_SUBETAPAS con IDENTITY e INDEX para la tabla COP_SUBETAPAS, se clona y modifica
+            SP_COP_OBTENER_MENSAJE para buscar solo por el ID_COP_SUBETAPAS y se clona SP_COP_DETALLE_ORIGINACION ahora retorna
+            tambien el ID_COP_SUBETAPAS</td>
+            <td>10/2022</td>
+        </tr>
+        <tr>
+            <td>4.90.0-1.1</td>
+            <td>Se modifica SP SP_BPM_AGREGA_COMENTARIO agregando validacion que permita actualizar comentario si es NULL en tarea cerrada </td>
+			<td></td>
+			<td></td>
+            <td>09/2022</td>
+        </tr>
+        <tr>
+            <td>4.89.0-2.2</td>
+            <td>BPM Task: Bca Propia No funcionario atendido por Bca propia – Hipotecario : Story APC-23950 / APC-24051 : Task APC-24113 / APC-24120</td>
+            <td></td>
+	        <td></td>
+            <td>09/2022</td>
+        </tr>
+        <tr>
+            <td>4.88.0-1.5</td>
+            <td>BPM Task: Integrar nuevas tarjetas de credito digital personas - Persona: Story LCN-14508 : Task LCN-14643</td>
+            <td></td>
+	        <td></td>
+            <td>09/2022</td>
+        </tr>
+        <tr>
+            <td>4.87.0-1.1</td>
+            <td>BPM Task: Reglas Productos avanzar tarea INTERNET_P : Story APC-23919 : Task APC-23919</td>
+	    <td></td>
+	    <td></td>
+            <td>08/2022</td>
+        </tr>
+        <tr>
+              <td>4.86.0-1.2</td>
+              <td>LCN-14561: Se agrega sp listar oportunidades distintas a en proceso</td>
+  	    <td></td>
+  	    <td></td>
+              <td>09/2022</td>
+          </tr>
+        <tr>
+              <td>4.85.0-1.3</td>
+              <td>LCN-14497: Se agregan contrato de tipo producto CTA_CTE_ME_DIG</td>
+          <td></td>
+          <td></td>
+              <td>08/2022</td>
+        </tr>
+        <tr>
+            <td>4.84.0-1.4</td>
+            <td>LCN-14418: Se agregan Nombre y Descripcion de producto</td>
+	    <td></td>
+	    <td></td>
+            <td>08/2022</td>
+        </tr>
+        <tr>
+            <td>4.83.0-1.1</td>
+            <td>BPM Task: Flujo BPM Personas - Crear Cta Cte ME Personas : Story LCN-14364 : Task LCN-14404</td>
+	    <td></td>
+	    <td></td>
+            <td>07/2022</td>
+        </tr>
+	<tr>
+            <td>4.82.0-1.2</td>
+            <td>BPM Task: Codigo 103 para Credito Cuota Bundle : Story APC-23873 : Task APC-24072</td>
+	    <td></td>
+	    <td></td>
+            <td>09/2022</td>
+        </tr>
+        <tr>
+            <td>4.81.0-1.1</td>
+             <td>BPM Task: Modificar Notificaciones de Venta indicando el numero de la oportunidad - Persona: Story CIP-3768 : Task CIP-3778</td>
+	    <td></td>
+	    <td></td>
+            <td>09/2022</td>
+        </tr>
+        <tr>
+            <td>4.80.0-1.1</td>
+            <td>BPM Task: Modificar Notificaciones de Venta indicando el numero de la oportunidad : Story CIP-3768 : Task CIP-3778</td>
+	    <td></td>
+	    <td></td>
+            <td>09/2022</td>
+        </tr>
+        <tr>
+            <td>4.79.0-2.2</td>            
+            <td>BPM Task: Creación Auditoria Derivar : Story APC-23974 : Task APC-24010</td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+        </tr>
+        <tr>
+            <td>4.78.0-2.2</td>
+            <td>BPM Task: SEGOBS-1234 Bca Propia - Fujo no Funcionario (Visado) : Story APC-23934 : Task APC-23935</td>
+            <td>4.76.0</td>
+            <td></td>
+            <td>08/2022</td>
+        </tr>
+        <tr>
+            <td>4.77.0-2.2</td>
+            <td>BPM Task: SEGOBS-1234 Bca Propia - Fujo no Funcionario (Riesgo) : Story APC-23920 : Task APC-23922</td>
+            <td></td>
+            <td></td>
+            <td>08/2022</td>
+        </tr>
+        <tr>
+            <td>4.76.0-1.2</td>
+            <td>BPM Task: Nuevo tipo visado para banca privada : Story APC-23927 : Task APC-23931</td>
+            <td></td>
+            <td>SI</td>
+            <td>08/2022</td>
+        </tr>        
+        <tr>
+            <td>4.75.0-1.1</td>
+            <td>BPM Task: Problema Avanzar tarea : Story APC-23814 : Task APC-23825</td>
+	    <td></td>
+	    <td></td>
+            <td>07/2022</td>
+        </tr>
+        <tr>
+            <td>4.74.0-1.1</td>
+            <td>Se modifica sp para eliminar duplicados y obtener ultima accion realizada con la oportunidad Task APC-23792</td>
+	    <td></td>
+	    <td></td>
+            <td>07/2022</td>
+        </tr>
+        <tr>
+            <td>4.73.0-1.1</td>
+            <td>se crea SP para obtener la tarea actual por id de oportunidad. APC-23730 OBS-1075</td>
+	    <td></td>
+	    <td></td>
+            <td>08/2022</td>
+        </tr>
+        <tr>
+            <td>4.72.0-1.1</td>
+            <td>BPM Task: Modificar flujo cuenta fan kids onboarding : Task LCN-13122 : Task LCN-14343</td>
+	    <td></td>
+	    <td></td>
+              <td>07/2022</td>
+        </tr>
+        <tr>
+            <td>4.71.0-1.1</td>
+            <td>BPM Task: Modificar flujo cuenta fan kids onboarding  : Story LCN-13122 : Task LCN-14343</td>
+	    <td></td>
+	    <td></td>
+            <td>07/2022</td>
+  			</tr>
+        <tr>
+            <td>4.70.0-1.1</td>
+            <td>LCN-14292: Se añade comprobación de estado para impresión KIT_ONBORDING</td>
+	    <td></td>
+	    <td></td>
+            <td>07/2022</td>
+        </tr>  
+        <tr>
+            <td>4.69.0-1.1</td>
+            <td>LCN-14184 : BANDEJA ILV  - Se elimina relación tabla bpm_tareas</td>
+	    <td></td>
+	    <td></td>
+            <td>06/2022</td>
+        </tr>
+        <tr>
+            <td>4.68.0-1.3</td>
+            <td>LCN-14121 : CTACTE DOLARES DIGITAL EMPRESAS - Se incorpora contrato para tipo producto CCDIG_EMP</td>
+	    <td></td>
+	    <td></td>
+            <td>06/2022</td>
+        </tr>
+        <tr>
+            <td>4.67.0-1.3</td>
+            <td>LCN-14187: Modificación para añadir atributo tiene ILV a oportunidad</td>
+	    <td></td>
+	    <td></td>
+            <td>06/2022</td>
+        </tr>
+        <tr>
+            <td>4.66.0-1.1</td>
+            <td>BPM Task: Crear flujo BPM para producto cuenta corriente ditigital ME empresas : Story LCN-13780 : Task LCN-14031</td>
+	    <td></td>
+	    <td></td>
+            <td>06/2022</td>
+        </tr>
+        <tr>
+            <td>4.65.0-1.1</td>
+            <td>LCN-13779 : Crear SP para bandeja con cliente ILV para cuenta vista PJ y cuenta corriente empresas </td>
+	    <td></td>
+	    <td></td>
+            <td>06/2022</td>
+        </tr>
+        <tr>
+            <td>4.64.0-2.2</td>
+            <td>BPM Task: Crear flujo cliente ILV para cuenta vista PJ y cuenta corriente empresas : Story LCN-13446 : Task LCN-13665/</td>
+	    <td></td>
+	    <td></td>
+            <td>06/2022</td>
+        </tr>
+        <tr>
+            <td>4.63.0-1.2</td>
+            <td>LCN-13687: TC Digital - Se incorpora contrato para tipo producto TC_DIGITAL</td>
+	    <td></td>
+	    <td></td>
+            <td>06/2022</td>
+        </tr>
+        <tr>
+            <td>4.62.0-1.3</td>
+            <td>LCN-13447: Cta Cte Digital Empresas - Firma apoderado banco-Se agrega contrato para tipo producto CTACTE_EMP_DIG</td>
+	    <td></td>
+	    <td></td>
+            <td>05/2022</td>
+        </tr>       
+        <tr>
+            <td>4.61.0-1.2</td>
+            <td>BPM Task: Crear flujo BPM empresas para cta cte digital : Story LCN-12789 : Task LCN-13100</td>
+	    <td></td>
+	    <td></td>
+            <td>05/2022</td>
+        </tr>
+        <tr>
+            <td>4.60.0-1.3</td>
+            <td>LCN-12788 - LCN-12856 : Se incorpora ID de producto para asignar nombre en bandeja de abogados y descarga de excels</td>
+	    <td></td>
+	    <td></td>
+            <td>05/2022</td>
+        </tr>
+        <tr>
+            <td>4.59.0-1.2</td>      
+            <td>LCN-6863: Cuenta FAN Kids - Verificación en emisión de TD</td>
+	    <td></td>
+	    <td></td>
+            <td>05/2022</td>
+        </tr>
+        <tr>
+            <td>4.58.1-1.1</td>
+            <td>Actualización oficina de autorización de la oportunidad - Incidente CIP-3665</td>
+	    <td></td>
+	    <td></td>
+            <td>07/2022</td>
+        </tr>
+        <tr>
+            <td>4.58.0-2.4</td>
+            <td>BPM Task: Incoporación Marca Preaprobado a Producto Empresa y Persona : Story NORCDN-7472 : Task NORCDN-7487 / NORCDN-7648</td>
+	    <td></td>
+	    <td></td>
+            <td>06/2022</td>
+        </tr>
+    	<tr>
+            <td>4.57.0-1.1</td>
+            <td>BPM Task: versión dependendiente para cambios en flujo empresas : Story EM-619 / EM-620 / APC-22916 : Task EM-645 / EM-644 / APC-23417</td>
+	    <td></td>
+	    <td></td>
+            <td>06/2022</td>
+        </tr>
+    	<tr>
+            <td>4.56.0-1.1</td>
+            <td>BPM Task: Corregir v_cui_ejecutivo en FN_BPM_REGLAS_BPM_R19 - agregar ceros izquierda : Story APC-22578 : Task APC-22663 - APC-23492</td>
+	    <td></td>
+	    <td></td>
+            <td>06/2022</td>
+        </tr>
+        <tr>
+            <td>4.55.0-1.1</td>
+            <td>APC-22685 : clonación de sp SP_BPM_ACT_PRODUCTO_CANAL_FIN se agrega id oportunidad a la salida</td>
+	    <td></td>
+	    <td></td>
+            <td>06/2022</td>
+        </tr>
+        <tr>
+            <td>4.54.1-1.2</td>
+            <td>CIP-3617 Actualizacion oficina</td>
+	    <td></td>
+	    <td></td>
+            <td>06/2022</td>
+        </tr>
+        <tr>
+            <td>4.54.0-3.1</td>
+            <td>Originacion Directa, agrega tarea esperar curse</td>
+	    <td></td>
+	    <td></td>
+            <td>06/2022</td>
+        </tr>        
+        <tr>
+            <td>4.53.0-1.1</td>
+            <td>Si esta creada la oportunidad se actualiza la fecha de actualizacion en la tabla bpm_oportunidad, APC-20690</td>            
+	    <td></td>
+	    <td></td>
+            <td>04/2022</td>
+        </tr>
+        <tr>
+            <td>4.52.0-1.1</td>
+                <td>BPM Task: Obtener nombre red desde la oportunidad : Story APC-21335 : Task APC-21827</td>            
+	    <td></td>
+	    <td></td>
+            <td>04/2022</td>
+        </tr>
+        <tr>
+            <td>4.51.0-3.1</td>
+            <td>Creación de consultas para Folios acogidos a ley 20130</td>           
+	    <td></td>
+	    <td></td>
+            <td>04/2022</td>
+        </tr>
+        <tr>
+            <td>4.50.0-2.2</td>
+            <td>BPM Task: Nuevo campo para el flujo de banca joven : Story APC-19076 : Task APC-20843</td>
+	    <td></td>
+	    <td></td>
+            <td>05/2022</td>
+        </tr>        
+	<tr>
+	    <td>4.49.0-2.5</td>
+	    <td>BPM Task: Reglas solicitud Electronica : Story APC-13328 : Task APC-19145</td>           
+	    <td></td>
+	    <td></td>
+            <td>12/2021</td>
+        </tr>
+        <tr>
+            <td>4.48.0-1.1</td>
+             <td>Modifica sp para crear originacion directa: SP_COP_INS_ORIG_DIRECTA</td>            
+	    <td></td>
+	    <td></td>
+             <td>05/2022</td>
+        </tr>
+        <tr>
+            <td>4.47.0-1.1</td>
+            <td>Se crea SP para crear originación de forma directa (sin uso de colas)</td>           
+	    <td></td>
+	    <td></td>
+             <td>04/2022</td>
+        </tr>          
+        <tr>
+            <td>4.46.0-2.3</td>
+            <td>BPM Task: BPM desarrollo correspondiente para operaciones y riesgo : Story APC-20252 : Task APC-20470 / Story APC-20251 : Task APC-20471</td>            
+	    <td></td>
+	    <td></td>
+             <td>03/2022</td>
+        </tr>
+        <tr>
+            <td>4.45.0-1.1</td>
+            <td>BPM Task: Flujo Cuenta FAN KIDS ONBOARDING : Story LCN-12375 : Task LCN-12395</td>           
+	    <td></td>
+	    <td></td>
+            <td>06/2021</td>
+          </tr>
+        <tr>
+        <td>4.44.0-1.1</td>
+             <td>BPM Task: Oportunidad queda sin usuario asignado : Story APC-19146 : Task APC-20462</td>
+	    <td></td>
+	    <td></td>
+            <td>03/2022</td>
+        </tr>
+        <tr>
+        <tr>
+            <td>4.43.0-2.4</td>
+            <td>BPM Task: bpm task para la HU SEGOBS-0811 Configurar flujo de riesgo armada : Story APC-18330 : Task APC-18537</td>
+	    <td></td>
+	    <td></td>
+            <td>04/2022</td>
+        </tr>
+        <tr>
+            <td>4.42.0-2.3</td>
+            <td>BPM Task: Asignar nuevo grupo riesgo socofin - Alzamiento de Garantía : Story APC-13494 : Task APC-14704</td>
+	    <td></td>
+	    <td></td>
+            <td>10/2021</td>
+        </tr>
+        <tr>
+            <td>4.41.0-2.3</td>
+            <td>BPM Task: control de errores comunicación con Iron Mountain : Story APC-17822 : Task APC-18358</td>
+	    <td></td>
+	    <td></td>
+            <td>05/2022</td>
+        </tr>
+       <tr>
+         <td>4.40.2-3.2</td>
+         <td>Se crea Columna Virtual BPM_TAREAS.USUARIO_RUT e Índices en Tablas BPM_TAREAS, BPM_OPERACIONES y BPM_OPORTUNIDAD - Incidente CIP-3270</td>
+	    <td></td>
+	    <td></td>
+         <td>11/05/2022</td>
+       </tr>
+       <tr>
+         <td>4.40.0-1.1</td>
+         <td>BPM Task: solución idBpm inconcistente : Story APC-17553 : Task APC-17660</td>
+	    <td></td>
+	    <td></td>
+         <td>05/2022</td>
+       </tr>
+       <tr>
+         <td>4.39.0-1.1</td>
+         <td>BPM Task: Originación de créditos de empresa con dependencias : Story APC-17017 : Task APC-17361</td>
+	    <td></td>
+	    <td></td>
+         <td>05/2022</td>
+       </tr>
+       <tr>
+         <td>4.38.1-1.1</td>
+         <td>CIP-3180 - En SP_COP_REINT_FM20_ORIGINACION quito TO_TIMESTAMP y cambio sysdate por systimestamp</td>
+	    <td></td>
+	    <td></td>
+         <td>26/04/2022</td>
+       </tr>
+       <tr>
+         <td>4.38.0-1.1</td>
+         <td>FIX APC-17743 Se actualiza SP_VNT_ACTUALIZAR_PRODUCTOS, Solo se actualizaran las fechas_creacion de oportunidades en estado "creada"</td>
+	    <td></td>
+	    <td></td>
+         <td>04/2022</td>
+       </tr>
+       <tr>
+         <td>4.37.0-1.1</td>
+         <td>BPM Task: Revisión de SP_BPM_LISTADO_PROD_INSTANCDS Y fn_bpm_reglas_bpm_r19(ope.id_producto) : Story  APC-10093 : Task APC-17821</td>
+	    <td></td>
+	    <td></td>
+         <td>19/04/2022</td>
+       </tr>
+       <tr>
+         <td>4.36.0-1.4</td>
+         <td>BPM Task: Originación de créditos de empresa con dependencias : Story APC-17017 : Task APC-17361</td>
+	    <td></td>
+	    <td></td>
+         <td>19/04/2022</td>
+       </tr>
+		<tr>
+        <td>4.35.0-1.1</td>
+        <td>APC-17743 Se actualiza SP_VNT_ACTUALIZAR_PRODUCTOS, para actualizar fecha de creacion de la oportunidad, y así éste dato corresponda correctamente con la contratación de productos.</td>
+	    <td></td>
+	    <td></td>
+        <td>19/04/2022</td>
+      </tr>     
+      <tr>
+         <td>4.34.0-1.2</td>
+         <td>LCN-11984 - LCN-11964 - LCN-11965 - - Se actualiza persistencia, se agrega filtro por "id tarea" a bandeja asignadas y se devuelve campo comentario sin filtrar tanto para asignadas como historicas.</td>
+	    <td></td>
+	    <td></td>
+         <td>04/2022</td>
+      </tr>
+      <tr>
+           <td>4.33.0-1.1</td>
+           <td>LCN-9889 Se modifican SP Busqueda De Id Documento Filnet para agregar Contrato TC_DIGITAL</td>
+	    <td></td>
+	    <td></td>
+           <td>03/2022</td>
+      </tr>
+      <tr>
+         <td>4.32.0-1.5</td>
+         <td>BPM Task: Crear flujo BPM para TC Digital : Story LCN-9887 : Task LCN-10711</td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>
+      <tr>
+        <td>4.31.0-1.2</td>
+        <td>APC-16984 - Se crear FUNCTION FN_VNT_PYD_IDOPORTUNIDAD,SEQUENCE ISEQ_PYD_IDOPORTUNIDAD_E  y SEQUENCE ISEQ_PYD_IDOPORTUNIDAD_P</td>
+	    <td></td>
+	    <td></td>
+        <td>04/2022</td>
+      </tr>
+      <tr>
+         <td>4.30.2-1.4</td>
+         <td>CIP-2961 Crea SP_OPORTUNIDAD_CONF_BUSCAR_V2, SP_OPORTUNIDAD_REINTENTO_FEAV2, SP_OPORTUNIDADES_ERROR_ORIG_V2, SP_OP_RE_GES_ERR_DAT_FEA_REM.</td>
+	    <td></td>
+	    <td></td>
+         <td>04/2022</td>
+      </tr>
+      <tr>
+         <td>4.30.1-1.1</td>
+         <td>CIP-3379 SP_GET_TD_FAN_EMBOZADO_V2 Se corrige etiqueta de segunda consulta por '$.listaProductos[*].atributos[*]'.</td>
+	    <td></td>
+	    <td></td>
+         <td>03/2022</td>
+      </tr>
+      <tr>
+         <td>4.30.0-1.2</td>
+         <td>Se modifican SP Bandeja de Abogados oportunidades Asignadas e Historicas - LCN-11113 LCN-11295</td>
+	    <td></td>
+	    <td></td>
+         <td>03/2022</td>
+      </tr>
+	  <tr>
+         <td>4.29.0-2.6</td>
+         <td>BPM Task: Se debe orquestar creación de autorizaciones : Story APC-7206 : Task APC-12183</td>
+	    <td></td>
+	    <td></td>
+         <td>23/03/2022</td>
+      </tr>
+      <tr>
+         <td>4.28.0-2.3</td>
+         <td>BPM Task: Modificar valor de atributos luego de subir documentos : Story LCN-10813 : Task LCN-10823</td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>
+      <tr>
+         <td>4.27.0-1.2</td>
+         <td>BPM Task: Actualizacion de Reglas BCAMOVIL01 : Story AP-76927 : Task AP-81826</td>
+	    <td></td>
+	    <td></td>
+         <td>12/2021</td>
+      </tr>
+      <tr>
+         <td>4.26.0-2.2</td>
+         <td>BPM Task: Nuevo atributo para la Obs 605 : Story APC-14281 : Task APC-14630</td>
+	    <td></td>
+	    <td></td>
+         <td>23/03/2022</td>
+      </tr>
+      <tr>
+         <td>4.25.0-1.1</td>
+         <td>APC-16322 Correccion En bandeja se muestra la tarea de forma incorrecta</td>
+	    <td></td>
+	    <td></td>
+         <td>03/2022</td>
+      </tr>
+      <tr>
+         <td>4.24.1-2.1</td>
+         <td>En Procedimiento SP_GET_TD_FAN_EMBOZADO_V2, se agrega índice por etiqueta '$.listaProductos.nroFolio' y se optimiza consulta - Incidente CIP-3294</td>
+	    <td></td>
+	    <td></td>
+         <td>17/03/2022</td>
+      </tr>
+      <tr>
+         <td>4.24.0-1.1</td>
+         <td>Se deja de actualizar ejecutivo relacionado y se actualiza datos adicionales LCN-10842</td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>
+      <tr>
+         <td>4.23.0-2.1</td>
+         <td>Generación de Vista Materializada y creacón de SP para su consumo - Ticket AP-82551 </td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>
+      <tr>
+         <td>4.22.0-1.1</td>
+         <td>Se agrega campo ABOGADO_ASIGNADOR a SP_OPORTUNIDADES_ABOGADO_ASIG. LCN-7797 - Cuenta Vista Empresas PJ - Detalle asignador de la oportunidad </td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>
+      <tr>
+         <td>4.21.0-1.3</td>
+         <td>Se agrega tarea a los SPs. LCN-9917 Cuenta Vista Empresas PJ - Pruebas de flujo completo venta (2) </td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>    
+      <tr>
+         <td>4.20.0-1.2</td>
+         <td>BPM Task: Flujo Armada : Story APC-8050 : Task APC-12249</td>
+	    <td></td>
+	    <td></td>
+         <td>01/2022</td>
+      </tr>
+      <tr>
+         <td>4.19.0-2.5</td>
+         <td>BPM Task: Modificación de reglas para el metodo de venta : Story APC-8050 : Task APC-8586</td>
+	    <td></td>
+	    <td></td>
+         <td>11/2021</td>
+      </tr>
+      <tr>
+         <td>4.18.0-1.1</td>
+         <td>BPM Task: Modificar reglas mecanizado armada : Story APC-8050 : Task APC-8087</td>
+	    <td></td>
+	    <td></td>
+         <td>11/2021</td>
+      </tr>
+      <tr>
+         <td>4.17.0-1.1</td>
+         <td>BPM Task: Flujo OFAC y PEP BPM - Venta Empresa : Task CIP-3195 : Task CIP-3193 : Rechazo</td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>
+      <tr>
+         <td>4.16.0-1.2</td>
+         <td>BPM Task: Flujo OFAC y PEP BPM - Venta Empresa : Task CIP-3195 : Task CIP-3193 : tareasAgrupadas</td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>
+      <tr>
+         <td>4.15.0-1.1</td>
+         <td>BPM Task: Flujo OFAC y PEP BPM - Venta Empresa : Task CIP-3195 : Task CIP-3193 : V2</td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>
+      <tr>
+         <td>4.14.0-1.2</td>
+         <td>CIP-3243 Flujo PEP OFAC EMPRESAS</td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>
+      <tr>
+         <td>4.13.0-2.5</td>
+         <td>BPM Task: Agregar a flujo empresa cuenta PJ tarea pendiente aprobacion cliente onboarding : Story LCN-5780 : Task LCN-8809 : FEA</td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>
+      <tr>
+         <td>4.12.0-2.8</td>
+         <td>BPM Task: Flujo OFAC y PEP BPM - Venta Empresa : Task CIP-3195 : Task CIP-3193</td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>
+      <tr>
+         <td>4.11.0-1.2</td>
+         <td>BPM Task: Agregar a flujo empresa cuenta PJ tarea pendiente aprobacion cliente onboarding : Story LCN-5780 : Task LCN-8809 : CTAVISTAEMPPJ</td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>
+      <tr>
+         <td>4.10.0-2.2</td>
+         <td>BPM Task: Agregar a flujo empresa cuenta PJ tarea pendiente aprobacion cliente onboarding : Story LCN-5780 : Task LCN-8809 : CurseAnt</td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>
+      <tr>
+         <td>4.9.0-2.1</td>
+         <td>BPM Task: Agregar a flujo empresa cuenta PJ tarea pendiente aprobacion cliente onboarding : Story LCN-5780 : Task LCN-8809</td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>    
+      <tr>
+         <td>4.8.0-2.6</td>
+         <td>BPM Task: Crear flujo cuenta vista empresa, flujo empresa BPM : Story LCN-6099 : Task LCN-6323</td>
+	    <td></td>
+	    <td></td>
+         <td>02/2022</td>
+      </tr>      
+      <tr>
+         <td>4.7.1-2.2</td>
+         <td>BPM Task: Incorporar Variable : Story APC-8980 : Task APC-11248</td>
+	    <td></td>
+	    <td></td>
+         <td>12/2021</td>
+      </tr>
+      <tr>
+         <td>4.7.0-1.3</td>
+         <td>Se cambia validación producto CTAVISTAEMPPJ a SPs de bandeja abogado.LCN-9772 Cuenta Vista Empresas PJ - Modificar bandeja de abogado para listar producto</td>
+	    <td></td>
+	    <td></td>
+         <td>03/2022</td>
+      </tr>
+      <tr>
+         <td>4.6.0-1.3</td>
+         <td>Se agrega validación producto CTAVISTAEMPPJ a SPs de bandeja apoderado.LCN-6019 - Cuenta Vista Empresas PJ - Firma Apoderado Banco</td>
+	    <td></td>
+	    <td></td>
+         <td>01/2022</td>
+      </tr>
+      <tr>
+         <td>4.5.0-1.1</td>
+         <td>Se agrega campo tarea_actual a SP_OPORTUNIDADES_ABOGADO_ASIG. LCN-6195 y LCN-9628 - CV Emp PJ Bandeja abogados</td>
+	    <td></td>
+	    <td></td>
+         <td>12/2021</td>
+      </tr>
+      <tr>
+         <td>4.4.0-1.4</td>
+         <td>Crea Tabla y SP administrador de abogados</td>
+	    <td></td>
+	    <td></td>
+         <td>12/2021</td>
+      </tr>
+      <tr>
+         <td>4.3.0-1.2</td>
+         <td>BPM Task: Servicio de actualización para nuevo campo requerido : Story APC-8585 : Task APC-10789</td>
+	    <td></td>
+	    <td></td>
+         <td>12/2021</td>
+      </tr>
+      <tr>
+         <td>4.2.0-1.1</td>
+         <td>Se crea SP para actualizar los datos de la firma del cliente en la oportunidad - LCN-5986 Cta Vista Emp PJ</td>
+	    <td></td>
+	    <td></td>
+         <td>12/2021</td>
+      </tr>
+      <tr>
+         <td>4.1.0-2.1</td>
+         <td>BPM Task: Servicio Sincrono Firma Apoderado : Story LCN-3904 : Task LCN-3905</td>
+	    <td></td>
+	    <td></td>
+         <td>11/2021</td>
+      </tr>
+      <tr>
+         <td>4.0.0-1.5</td>
+         <td>Se agrega campo tabla token apod y nuevo SP. LCN-8680 Firma Apoderado Banco - Registrar apoderado</td>
+	    <td></td>
+	    <td></td>
+         <td>11/2021</td>
+      </tr>
+      <tr>
+         <td>3.99.0-2.3</td>
+         <td>BPM Task: Firma apoderado sin activación : Story LCN-8137 : Task LCN-8491</td>
+	    <td></td>
+	    <td></td>
+         <td>11/2021</td>
+      </tr>
+      <tr>
+         <td>3.98.1-1.3</td>
+         <td>Se agregan SP_COP_BUSQUEDA_ORIGINACION_V2, SP_COP_REINT_FM20_ORIGINACION, SP_COP_UPD_ESTADO_ORIGINACION</td>
+	    <td></td>
+	    <td></td>
+         <td>12/2021</td>
+      </tr>
+      <tr>
+         <td>3.98.0-1.3</td>
+         <td>Se modifican SPs obtención del rep. legal. LCN-5934 Cta Vista Empresas - Bandeja "Históricas"</td>
+	    <td></td>
+	    <td></td>
+         <td>11/2021</td>
+      </tr>
+      <tr>
+         <td>3.97.0-1.2</td>
+         <td>Se crea SP para bandeja abogado op históricas. LCN-5934 Cta Vista Empresas - Bandeja "Históricas"</td>
+	    <td></td>
+	    <td></td>
+         <td>11/2021</td>
+      </tr>
+      <tr>
+           <td>3.96.0-1.1</td>
+           <td>BPM Task: Eliminación Sucursal CUI 0446 para Visado : Story APC-7025 : Task APC-7484</td>
+	    <td></td>
+	    <td></td>
+           <td>11/2021</td>
+      </tr>
+      <tr>
+           <td>3.95.0-1.1</td>
+           <td>Se crea nuevo SP oportunidades asignadas a abogado - LCN-5933 Cuenta Vista Empresas PJ - Bandeja Asignadas</td>
+	    <td></td>
+	    <td></td>
+           <td>11/2021</td>
+      </tr>
+      <tr>
+            <td>3.94.0-1.1</td>
+            <td>Se mejora rendimiento SP - LCN-8137 Bandeja Apoderado Banco - Mejorar consulta </td>
+	    <td></td>
+	    <td></td>
+            <td>10/2021</td>
+      </tr>
+      <tr>
+          <td>3.93.0-1.1</td>
+         <td>Se crea SP para dejar oportunidades y productos cursados. LCN-8136 Cuenta Corriente Onboarding - Crear servicio multicanal para dejar cursado oportunidad y producto</td>
+	    <td></td>
+	    <td></td>
+         <td>10/2021</td>
+      </tr>
+      <tr>
+           <td>3.92.0-1.1</td>
+           <td>Se modifica SP para bandeja de abogados. LCN-7874 Cta Vista Empresa PJ - Cuenta Vista Empresas PJ - Modificar consulta para bandeja "Operaciones Nuevas" Task:LCN-7953</td>
+	    <td></td>
+	    <td></td>
+           <td>10/2021</td>
+      </tr>
+      <tr>
+           <td>3.91.1-1.1</td>
+           <td>CIP-2905 - Se agrega código de error cuando la tarea está cerrada y no se le debe agregar comentario</td>
+	    <td></td>
+	    <td></td>
+           <td>29/10/2021</td>
+      </tr>
+      <tr>
+           <td>3.91.0-2.3</td>
+           <td>BPM Task: Análisis comportamiento Banca Propia para Visado en Oficina (oficina 0) : Story APC-5240 : Task APC-5248</td>
+	    <td></td>
+	    <td></td>
+           <td>10/2021</td>
+      </tr>
+      <tr>
+          <td>3.90.0-2.3</td>
+          <td>BPM Task: Ajustes al flujo de mantención de cupo, resuscripción y cambio de condiciones comerciales de Línea de crédito : Story AP-74790 : Task AP-75090</td>
+	    <td></td>
+	    <td></td>
+          <td>09/2021</td>
+      </tr>
+      <tr>
+          <td>3.89.0-2.2</td>
+          <td>BPM Task: Crear regla kit-preemitido : Story AP-69471 : Task AP-70891 : regla inicio proceso</td>
+	    <td></td>
+	    <td></td>
+          <td>08/2021</td>
+      </tr>
+      <tr>
+          <td>3.88.0-2.3</td>
+          <td>BPM Task: Crear regla kit-preemitido : Story AP-69471 : Task AP-70891</td>
+	    <td></td>
+	    <td></td>
+          <td>08/2021</td>
+      </tr>
+      <tr>
+           <td>3.87.1-1.1</td>
+           <td>AP-47369 - Se genera nueva vista materializada para bandeja comercial BPM_VIEW_QUERY_EJE_VIG_90D</td>
+	    <td></td>
+	    <td></td>
+           <td>10/2021</td>
+      </tr>
+      <tr>
+          <td>3.87.0-1.2</td>
+          <td>Se modifican sps para optimizar consultas. LCN-6635 - Bandeja Superusuario FAN</td>
+	    <td></td>
+	    <td></td>
+          <td>09/2021</td>
+      </tr>    
+      <tr>
+          <td>3.86.0-1.1</td>
+          <td>BPM Task: Agregar Curse Manual para Grandes Empresas : Story AP-72848 : Task AP-72864</td>
+	    <td></td>
+	    <td></td>
+          <td>08/2021</td>
+      </tr>    
+      <tr>
+          <td>3.85.0-1.1</td>
+          <td>BPM Task: Modificar forma de obtener atributo TBANCA : Story AP-72848 : Task AP-72878</td>
+	    <td></td>
+	    <td></td>
+          <td>08/2021</td>
+      </tr>
+      <tr>
+          <td>3.84.0-2.4</td>
+          <td>BPM Task: Grupos de Visado Empresa : Story AP-68431 : Task AP-72422</td>
+	    <td></td>
+	    <td></td>
+          <td>08/2021</td>
+      </tr>
+      <tr>
+           <td>3.83.1-2.1</td>
+           <td>BPM Task: Cambio Grupo de Visado Alzamiento de Garantía : Story APC-5250 : Task APC-5324 : autorización riesgo</td>
+	    <td></td>
+	    <td></td>
+           <td>10/2021</td>
+      </tr>  
+      <tr>
+           <td>3.83.0-2.1</td>
+           <td>BPM Task: Cambio Grupo de Visado Alzamiento de Garantía : Story APC-5250 : Task APC-5324</td>
+	    <td></td>
+	    <td></td>
+           <td>10/2021</td>
+      </tr>      
+      <tr>
+          <td>3.82.0-2.2</td>
+          <td>BPM Task: Cambio flujo Alzamiento de Garantía : Story AP-75349 : Task AP-75350</td>
+	    <td></td>
+	    <td></td>
+          <td>10/2021</td>
+      </tr>
+      <tr>
+          <td>3.81.1-1.1</td>
+          <td>Se crea nueva version de SP SP_GET_TD_FAN_EMBOZADO para informacion de tarjeta de debito - CIP-2904</td>
+	    <td></td>
+	    <td></td>
+          <td>10/2021</td>
+      </tr>
+      <tr>
+           <td>3.81.0-1.1</td>
+           <td>Se crea SP para validar la creacion de tarjeta - LCN-7259 Cuenta Vista Empresas PNG - Validación firma cliente</td>
+	    <td></td>
+	    <td></td>
+           <td>10/2021</td>
+      </tr>
+      <tr>
+          <td>3.80.0-1.1</td>
+          <td>Se crea sp para validar oportunidades onboarding en curse. LCN-6864 - Cuenta Corriente Onboarding</td>
+	    <td></td>
+	    <td></td>
+          <td>09/2021</td>
+      </tr>
+      <tr>
+          <td>3.79.0-1.2</td>
+          <td>Se crea tabla y SP para guardar envío de correo a cliente al firmar contrato. LCN-6103 Cuenta Vista PNG</td>
+	    <td></td>
+	    <td></td>
+          <td>08/2021</td>
+      </tr>
+      <tr>
+          <td>3.78.0-1.1</td>
+          <td>Se crea nuevo SP para bandeja de abogados. LCN-5781 Cta Vista Empresa PJ - Listar oport. para Abogado Task:5824</td>
+	    <td></td>
+	    <td></td>
+          <td>07/2021</td>
+      </tr>
+      <tr>
+          <td>3.77.0-1.1</td>
+          <td>BPM Task: Flujo crédito universal express : Apagado : Task AP-74853</td>
+	    <td></td>
+	    <td></td>
+          <td>09/2021</td>
+      </tr>
+      <tr>
+          <td>3.76.0-1.1</td>
+          <td>BPM Task: Modificar proceso Mecanizado Armada : Story AP-72658 : Task AP-72666</td>
+	    <td></td>
+	    <td></td>
+          <td>08/2021</td>
+      </tr>
+      <tr>
+          <td>3.75.0-1.1</td>
+          <td>BPM Task: Modificar template alzamiento de garantía : Story AP-74006 : Task AP-74033</td>
+	    <td></td>
+	    <td></td>
+          <td>09/2021</td>
+      </tr>
+      <tr>
+          <td>3.74.0-1.3</td>
+          <td>BPM Task: Crear regla para alzamiento de garantía flujo BPM : Story AP-62046 : Task AP-63834</td>
+	    <td></td>
+	    <td></td>
+          <td>07/2021</td>
+      </tr>
+      <tr>
+          <td>3.73.0-1.2</td>
+          <td>BPM Task: Crédito Hipotecario Persona : Task AP-45270</td>
+	    <td></td>
+	    <td></td>
+          <td>04/2021</td>
+      </tr>
+      <tr>
+          <td>3.72.0-1.1</td>
+          <td>BPM Task: Creacion Servicio Obtencion Ejecutivo Relacionado : Story AP-62210 : Task AP-63909</td>
+	    <td></td>
+	    <td></td>
+          <td>07/2021</td>
+      </tr>
+      <tr>
+          <td>3.71.0-1.3</td>
+          <td>Se modifica filtro SPs a 50 reg. LCN-5345 Cuenta FAN Kids - Bandeja superusuario filtro producto</td>
+	    <td></td>
+	    <td></td>
+          <td>07/2021</td>
+      </tr>
+      <tr>
+        <td>3.70.0-1.3</td>
+          <td>BPM Task: Actualización de flujo BPM cuenta FAN kids : Story LCN-4810 : Task LCN-4918</td>
+	    <td></td>
+	    <td></td>
+          <td>06/2021</td>
+      </tr>
+      <tr>
+        <td>3.69.0-1.5</td>
+          <td>BPM Task: Crear flujo Cuenta Fan Kids : Story LCN-3870 : Task LCN-3873</td>
+	    <td></td>
+	    <td></td>
+          <td>06/2021</td>
+      </tr>
+      <tr>
+        <td>3.68.0-1.1</td>
+          <td>Se agrega SP_BUSCAR_ID_DOCUMENTO. LCN-5348 Firma Apoderado Banco - nuevo servicio</td>
+	    <td></td>
+	    <td></td>
+          <td>07/2021</td>
+      </tr>
+      <tr>
+          <td>3.67.0-1.1</td>
+          <td>BPM Task: Agregar errores todas las tareas de Gestion Error : Story CIP-2649 : Task CIP-2689 : version 2</td>
+	    <td></td>
+	    <td></td>
+          <td>07/2021</td>
+      </tr>
+      <tr>
+          <td>3.66.0-2.3</td>
+          <td>BPM Task: Agregar errores todas las tareas de Gestion Error : Story CIP-2649 : Task CIP-2689</td>
+	    <td></td>
+	    <td></td>
+          <td>07/2021</td>
+      </tr>
+      <tr>
+          <td>3.65.0-1.1</td>
+          <td>BPM Task: blindar la obtencion de reglas del flujo curse : Story CIP-2649 : Task CIP-2652</td>
+	    <td></td>
+	    <td></td>
+          <td>06/2021</td>
+      </tr>
+      <tr>
+          <td>3.64.0-1.1</td>
+          <td>BPM Task: Solicitud de Autorizaciones clasificacionRiesgo null en Atribuciones : Incidente CIP-2649 : Task CIP-2650</td>
+	    <td></td>
+	    <td></td>
+            <td>06/2021</td>
+      </tr>
+      <tr>
+          <td>3.63.0-2.2</td>
+          <td>BPM Task: Curse Manual : Story AP-56063 : Task AP-56625</td>
+	    <td></td>
+	    <td></td>
+          <td>06/2021</td>
+      </tr>
+      <tr>
+          <td>3.62.0-1.3</td>
+          <td>Se crean indices LCN-5345</td>
+	    <td></td>
+	    <td></td>
+          <td>07/2021</td>
+      </tr>
+      <tr>
+          <td>3.61.1-1.2</td>
+          <td>Se elimina estado tomado, se toman 5 oportunidades a la vez por instancia, se verifica que solo se toman las actualizadas - CIP-2796</td>
+	    <td></td>
+	    <td></td>
+          <td>29/07/2021</td>
+      </tr>
+      <tr>
+          <td>3.61.0-1.2</td>
+          <td>Se modifican SPs de bandeja de superusuario. LCN-4231 Mejora rendimiento.</td>
+	    <td></td>
+	    <td></td>
+          <td>06/2021</td>
+      </tr>
+      <tr>
+          <td>3.60.0-2.1</td>
+          <td>Se modifican SPs de bandeja de superusuario para cta vista empresa. HU LCN-3554, Task LCN-3782</td>
+	    <td></td>
+	    <td></td>
+          <td>05/2021</td>
+      </tr>
+      <tr>
+          <td>3.59.0-1.4</td>
+          <td>Nuevos servicios actualiza idreservas</td>
+	    <td></td>
+	    <td></td>
+          <td>06/2021</td>
+      </tr>
+      <tr>
+          <td>3.58.0-1.1</td>
+          <td>BPM Task: Implementación correctiva para control del error (idsolicitud) : Story APC-2778 : Task APC-3047 : no tildes</td>
+	    <td></td>
+	    <td></td>
+          <td>06/2021</td>
+      </tr>
+      <tr>
+          <td>3.57.0-1.1</td>
+          <td>BPM Task: Enviar oportunidades creadas por el canal Banca Telefónica o Telemarketing a la tarea Revisión Banca Telefónica : Story AP-58426 : Task AP-58446</td>
+	    <td></td>
+	    <td></td>
+          <td>06/2021</td>
+      </tr>
+      <tr>
+          <td>3.56.0-2.1</td>
+          <td>Se generan cambios para épica de Operaciones y Riesto, nuevas vistas materializadas e Indices, AP-50537 y AP-50660</td>
+	    <td></td>
+	    <td></td>
+          <td>24/05/2021</td>
+      </tr>
+      <tr>
+          <td>3.55.0-1.1</td>
+          <td>Se generan cambios para credito comercial, nuevas vistas materializadas AP-47368</td>
+	    <td></td>
+	    <td></td>
+          <td>18/05/2021</td>
+      </tr>
+      <tr>
+          <td>3.54.1-2.2</td>
+          <td>En SP_BPM_ANULAR_PRODUCTO se elimina filtro por columna BPM_OPERACIONES.ID_BPM y se actualizan registros en tabla BPM_CATALOG_TAREAS - Incidente: CIP-2709</td>
+	    <td></td>
+	    <td></td>
+          <td>06/07/2021</td>
+      </tr>
+      <tr>
+          <td>3.54.0-1.4</td>
+          <td>Se modifican SPs de bandeja de superusuario y apoderado. LCN-4231 Mejora rendimiento, Task LCN-4343</td>
+	    <td></td>
+	    <td></td>
+          <td>06/2021</td>
+      </tr>
+      <tr>
+          <td>3.53.0-1.3</td>
+          <td>LCN-4174: Mejora Consulta firma apoderado Banco y apoderado PEP. Task: LCN-4174 y LCN-4175</td>
+	    <td></td>
+	    <td></td>
+          <td>06/2021</td>
+      </tr>
+      <tr>
+            <td>3.52.0-2.4</td>
+            <td>BPM Task: Modificación flujo BPM para crédito postgrado renovación : Story NORCDN-2088 : Task NORCDN-2738 : V2</td>
+	    <td></td>
+	    <td></td>
+            <td>05/2021</td>
+      </tr>
+      <tr>
+          <td>3.51.0-2.2</td>
+          <td>BPM Task: Agregar riesgo siempre para el flujo de la venta de crédito renovacion postgrado : Story NORCDN-2088 : Task NORCDN-3842</td>
+	    <td></td>
+	    <td></td>
+          <td>06/2021</td>
+      </tr>
+      <tr>
+            <td>3.50.0-2.4</td>
+            <td>BPM Task: Modificación flujo BPM para crédito postgrado renovación : Story NORCDN-2088 : Task NORCDN-2738 : V2</td>
+	    <td></td>
+	    <td></td>
+            <td>05/2021</td>
+      </tr>
+      <tr>
+            <td>3.49.0-2.4</td>
+            <td>BPM Task: Modificación flujo BPM para crédito postgrado renovación : Story NORCDN-2088 : Task NORCDN-2738</td>
+	    <td></td>
+	    <td></td>
+            <td>05/2021</td>
+      </tr>
+      <tr>
+          <td>3.48.1-1.1</td>
+          <td>CIP-2690 Modificación SP SP_GET_TD_FAN_EMBOZADO para originacion de canal Internet</td>
+	    <td></td>
+	    <td></td>
+          <td>05/2021</td>
+      </tr>
+      <tr>
+          <td>3.48.0-1.2</td>
+          <td>Modificación SP bandeja apod y con error - LCN-3553 , Task LCN-3641</td>
+	    <td></td>
+	    <td></td>
+          <td>05/2021</td>
+      </tr>
+      <tr>
+         <td>3.47.0-1.1</td>
+         <td>Modificación SP oport apod con error - LCN-3369 Cambio flujo Firma Apoderado, Task LCN-3403</td>
+	    <td></td>
+	    <td></td>
+         <td>05/2021</td>
+      </tr>
+      <tr>
+           <td>3.46.0-1.1</td>
+           <td>HU LCN-3369 Cambio flujo Firma Apoderado, Task LCN-3403</td>
+	    <td></td>
+	    <td></td>
+           <td>05/2021</td>
+      </tr>
+      <tr>
+          <td>3.45.0-2.2</td>
+          <td>Rechazo PEP - LCN-2491 - Se modifican SP para agregar nuevo campo COMENTARIOS</td>
+	    <td></td>
+	    <td></td>
+          <td>03/2021</td>
+      </tr>
+      <tr>
+           <td>3.44.0-3.1</td>
+           <td>Cta Cte Onboarding y FAN PNG: Bandeja Apod PEP - LCN-1467, LCN-1468</td>
+	    <td></td>
+	    <td></td>
+           <td>03/2021</td>
+      </tr>
+      <tr>
+           <td>3.43.0-1.1</td>
+           <td>Se modifica SP_OPORTUNIDADES_CON_ERROR incorporando logica para incluir cta onboarding y cta-fan-png</td>
+	    <td></td>
+	    <td></td>
+           <td>03/2021</td>
+      </tr>
+      <tr>
+           <td>3.42.0-1.1</td>
+           <td>Cuenta FAN PNG: Correo con contrato + N° Cta - HU: LCN-817, Task: LCN-1607</td>
+	    <td></td>
+	    <td></td>
+           <td>02/2021</td>
+      </tr>
+      <tr>
+           <td>3.41.0-1.1</td>
+           <td> Cuenta FAN PNG y Cta Cte Onb: Firma Apoderado Banco HU LCN-293 Task LCN-1422</td>
+	    <td></td>
+	    <td></td>
+           <td>02/2021</td>
+      </tr>
+      <tr>
+           <td>3.40.0-1.1</td>
+           <td> Cuenta FAN PNG: Filtro para FAB HU LCN-39 Task LCN-1070</td>
+	    <td></td>
+	    <td></td>
+      </tr>
+      <tr>
+          <td>3.39.1-1.1</td>
+          <td>CIP-2587 SP_GET_TD_FAN_EMBOZADO</td>
+	    <td></td>
+	    <td></td>
+          <td>05/2021</td>
+      </tr>
+      <tr>
+            <td>3.39.0-1.1</td>
+            <td>BPM Task: Modificación Regla BPM : Story LCN-608 : Task LCN-3370</td>
+	    <td></td>
+	    <td></td>
+            <td>05/2021</td>
+      </tr>
+      <tr>
+            <td>3.38.0-1.1</td>
+            <td>Se crea nuevo SP SP_RESTRINGIR_OPORTUNIDAD. HDU:LCN-2140 TASK:LCN-3008</td>
+	    <td></td>
+	    <td></td>
+            <td>04/2021</td>
+      </tr>
+      <tr>
+          <td>3.37.0-1.1</td>
+          <td>BPM Task: Ajuste ventas ejecutivos banca telefónica y telemarketing para asignar a grupo especial de visado centralizado : Story AP-46428 : Task AP-46436 : Corrección</td>
+	    <td></td>
+	    <td></td>
+          <td>04/2021</td>
+      </tr>
+      <tr>
+          <td>3.36.0-1.2</td>
+          <td>BPM Task: Ajuste ventas ejecutivos banca telefónica y telemarketing para asignar a gurpo especial de visado centralizado : Story AP-46428 : Task AP-46436</td>
+	    <td></td>
+	    <td></td>
+          <td>04/2021</td>
+      </tr>
+      <tr>
+           <td>3.35.0-1.3</td>
+           <td>Bpm Task: Cta Cte Onboarding Presencial / Cta FAN PNG Presencial : Task LCN-1904 / LCN-1903</td>
+	    <td></td>
+	    <td></td>
+           <td>03/2021</td>
+      </tr>
+      <tr>
+           <td>3.34.0-2.8</td>
+           <td>Se actualizan y se crean SP para mantenedor de apoderado, HU AP-37615</td>
+	    <td></td>
+	    <td></td>
+           <td>03/2021</td>
+      </tr>
+      <tr>
+           <td>3.33.0-1.1</td>
+           <td>Bpm Task: Nuevo servicio flujo FEA automática Cta Cte Onboarding : Task LCN-1161 : Modificación PEP</td>
+	    <td></td>
+	    <td></td>
+           <td>02/2021</td>
+      </tr>
+      <tr>
+         <td>3.32.0-1.1</td>
+         <td>Actualización SP SP_APOD_LIST_FIRMA_DOC, se agrega campo imagen firma y alias de campos, HU AP-36241</td>
+	    <td></td>
+	    <td></td>
+         <td>02/2021</td>
+      </tr>
+      <tr>
+           <td>3.31.0-1.3</td>
+           <td>Bpm Task: Nuevo servicio flujo FEA automática Cta Cte Onboarding : Task LCN-1161 : CCte Onboarding Internet</td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+      </tr>
+      <tr>
+           <td>3.30.0-1.1</td>
+           <td>Carga inicial para datos mantenedor de apoderados, HU AP-37945</td>
+	    <td></td>
+	    <td></td>
+           <td>02/2021</td>
+      </tr>
+      <tr>
+           <td>3.29.0-2.2</td>
+           <td>Bpm Task: Nuevo servicio flujo FEA automática Cta Cte Onboarding : Task LCN-1161 : MarcaTributaExtranjero</td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+      </tr>
+      <tr>
+           <td>3.28.0-2.5</td>
+           <td>Bpm Task: Nuevo servicio flujo FEA automática Cta Cte Onboarding : Task LCN-1161</td>
+	    <td></td>
+	    <td></td>
+	    <td></td>
+      </tr>
+      <tr>
+            <td>3.27.0-1.4</td>
+            <td>BPM Task: Cuenta FAN PNG: Servicio flujo FEA automática - Pyme pero por flujo persona : Story LCN-279 : Task LCN-625 : V2</td>
+	    <td></td>
+	    <td></td>
+            <td>02/2021</td>
+        </tr>
+        <tr>
+            <td>3.26.0-1.1</td>
+            <td>Se crean tablas y procedimientos almacenados para mantendor de Apoderados (Firma documentos) HU AP-36240</td>
+      <tr>
+            <td>3.25.0-2.3</td>
+            <td>BPM Task: Reintentar Packing : Task LCN-919</td>
+	    <td></td>
+	    <td></td>
+            <td>02/2021</td>
+        </tr>
+        <tr>
+            <td>3.24.0-2.2</td>
+            <td>BPM Task: Cuenta FAN PNG: Servicio flujo FEA automática - Pyme pero por flujo persona : Story LCN-279 : Task LCN-625</td>
+	    <td></td>
+	    <td></td>
+            <td>02/2021</td>
+        </tr>
+        <tr>
+            <td>3.23.0-2.3</td>
+            <td>BPM Task FEA de documentos en la punta : Story LCN-19 : Task LCN-185</td>
+	    <td></td>
+	    <td></td>
+            <td>02/2021</td>
+        </tr>  
+        <tr>
+            <td>3.22.0-2.5</td>
+            <td>SP_BPM_CREA_OPORTUNIDAD</td>
+	    <td></td>
+	    <td></td>
+            <td>01/2021</td>
+        </tr>
+        <tr>
+            <td>3.21.0-2.3</td>
+            <td>BPM Task FEA de documentos en la punta : Story LCN-19 : Task LCN-185</td>
+	    <td></td>
+	    <td></td>
+            <td>02/2021</td>
+        </tr>
+        <tr>
+            <td>3.20.0-1.1</td>
+            <td>BPM</td>
+	    <td></td>
+	    <td></td>
+            <td>01/2021</td>
+        </tr>
+        <tr>
+            <td>3.19.1-1.1</td>
+            <td>Se añade SP_COP_GET_ORIGINACIONES_OK</td>
+	    <td></td>
+	    <td></td>
+            <td>04/2021</td>
+        </tr>
+        <tr>
+            <td>3.19.0-1.1</td>
+            <td>Accion Validacion manual - BPM Task Servicio para avanzar Oportunidad : Incidencia LCN-156 : Task LCN-148.</td>
+	    <td></td>
+	    <td></td>
+            <td>01/2021</td>
+        </tr>
+        <tr>
+            <td>3.18.0-1.4</td>
+            <td>Creación de SPs para avanzar oportunidades en estado reintentar : Story LCN-148 : Task LCN-308.</td>
+	    <td></td>
+	    <td></td>
+            <td>01/2021</td>
+        </tr>
+        <tr>
+            <td>3.17.0-1.1</td>
+            <td>Btn Avanzar y filtro bandeja Reintentar Packing y Curse: Story LCN-57 : Task LCN-106.</td>
+	    <td></td>
+	    <td></td>
+            <td>12/2020</td>
+        </tr>
+      	<tr>
+            <td>3.16.0-1.1</td>
+            <td>BPM Task: Revisar Patrocinio : Task LCN-2442 : Lab : Corrección</td>
+	    <td></td>
+	    <td></td>
+            <td>04/2021</td>
+        </tr>
+        <tr>
+            <td>3.15.3-1.2</td>
+            <td>Se agregan índices recomendados a tabla BPM_TAREAS para optimización de consultas de los SP SP_DBJ_LST_OP_RIESGO_00 y SP_BDJ_LST_CATALOGO_COMER_GET - CIP-2504</td>
+	    <td></td>
+	    <td></td>
+            <td>15/03/2021</td>
+        </tr>
+		<tr>
+            <td>3.15.2-1.1</td>
+            <td>Actualización procedimiento SP_BPM_RETORNA_TAREAS_GRUPO - ISSUE APC-1927</td>
+	    <td></td>
+	    <td></td>
+            <td>11/02/2021</td>
+        </tr>
+    <tr>
+          <td>3.15.1-1.1</td>
+          <td>En SP_BDJ_LST_PRODUCTOS_OP_R17_01 se modifica para retornar Área de Usuario desde PERFIL_CN, en caso de venir Nulo en Tareas de Comité Riesgo. Además, se corrige retorno de Montos CLP y US. - Incidente: CIP-2282</td>
+	    <td></td>
+	    <td></td>
+          <td>02/2021</td>
+    </tr>
+    <tr>
+        <td>3.15.0-1.1</td>
+        <td>VENTA_CN - Se crea indice en tabla BPM_OPORTUNIDAD para el campo tipo json AUTORIZACIONES, HU: AP-32944</td>
+	    <td></td>
+	    <td></td>
+        <td>01/2021</td>
+    </tr>
+    <tr>
+        <td>3.14.0-1.1</td>
+        <td>Modificacion para derivar una oportunidad BT/TMK a Visado centralizado : Story AP-23268 : Task AP-29475.</td>
+	    <td></td>
+	    <td></td>
+        <td>01/2021</td>
+    </tr>  
+    <tr>
+        <td>3.13.0-1.1</td>
+        <td>Flujo para derivar una oportunidad BT/TMK a Visado centralizado : Story AP-23268 : Task AP-29475.</td>
+	    <td></td>
+	    <td></td>
+        <td>11/2020</td>
+    </tr>
+    <tr>
+        <td>3.12.0-2.1</td>
+        <td>Correcion defecto 'banca telefonica' : Story AP-19036 : Task AP-24325.</td>
+	    <td></td>
+	    <td></td>
+        <td>11/2020</td>
+    </tr>
+    <tr>
+        <td>3.11.0-1.1</td>
+        <td>Correccion a version 3.9: Story AP-19036 : Task AP-24325.</td>
+	    <td></td>
+	    <td></td>
+        <td>11/2020</td>
+    </tr>
+    <tr>
+        <td>3.10.0-2.1</td>
+        <td>Rework Cambio en grupo de ejecutivos de "banca telefonica" bajo el modelo por asignar : Story AP-19036 : Task AP-24325.</td>
+	    <td></td>
+	    <td></td>
+        <td>11/2020</td>
+    </tr>
+    <tr>
+       <td>3.9.0-3.7</td>
+       <td>BPM jefe zonal.</td>
+	    <td></td>
+	    <td></td>
+       <td>11/2020</td>
+    </tr>
+    <tr>
+         <td>3.9.0-2.4</td>
+         <td>Derivacion de venta desde TLMK o BCATEL a Visado centralizado : Story AP-23268 : Task AP-24332.</td>
+	    <td></td>
+	    <td></td>
+         <td>11/2020</td>
+    </tr>
+    <tr>
+        <td>3.8.0-1.1</td>
+        <td>Story: AP-19036 - Task: AP-24325 Cambio en grupo de ejecutivos de "banca telefonica" bajo el modelo por asignar.</td>
+	    <td></td>
+	    <td></td>
+        <td>11/2020</td>
+    </tr>   
+    <tr>
+          <td>3.7.0-1.2</td>
+          <td>Filtros en bandejas superusuario : Story AP-19036 : Task AP-29196 y AP-29204.</td>
+	    <td></td>
+	    <td></td>
+          <td>12/2020</td>
+    </tr>
+    <tr>
+          <td>3.6.0-1.1</td>
+          <td>Rework Configuración SP : Story AP-27479 : Task AP-28025.</td>
+	    <td></td>
+	    <td></td>
+          <td>11/2020</td>
+    </tr>
+    <tr>
+          <td>3.5.0-1.1</td>
+          <td>Configuración SP : Story AP-27479 : Task AP-28025.</td>
+	    <td></td>
+	    <td></td>
+          <td>11/2020</td>
+    </tr>
+    <tr>
+          <td>3.4.0-1.2</td>
+          <td>AP-22978 - Configuración de Oportunidad</td>
+	    <td></td>
+	    <td></td>
+          <td>11/2020</td>
+    </tr>
+    <tr>
+          <td>3.3.0-1.1</td>
+          <td>Correccion nuevas reglas FAB : Story AP-1644 : Task AP-7994</td>
+	    <td></td>
+	    <td></td>
+          <td>10/2020</td>
+    </tr>
+    <tr>
+          <td>3.2.0-1.4</td>
+          <td>Actualizacion reglas FAB : Story AP-1644 : Task AP-7994</td>
+	    <td></td>
+	    <td></td>
+          <td>10/2020</td>
+    </tr>
+    <tr>
+          <td>3.1.0-1.1</td>
+          <td>Modificacion orden de tareas por fecha inicio : Incidencia Prod CIP-2242 : Task: CIP-2243</td>
+	    <td></td>
+	    <td></td>
+          <td>11/2020</td>
+    </tr>
+    <tr>
+        <td>3.0.0-1.1</td>
+        <td>AP-9880 - Agregar api key firma TOC</td>
+	    <td></td>
+	    <td></td>
+        <td>11/2020</td>
+    </tr>
+    <tr>
+        <td>2.99.0-1.1</td>
+        <td>AP-9880 - Agregar columna para key del apoderado y pueda firma en TOC</td>
+        <td>11/2020</td>
+    </tr>
+    <tr>
+    	<td>2.98.2-1.1</td>
+        <td>Cambio regla tipo de visado Cta FAN : Incidencia Prod CIP-2242 : Task: CIP-2243</td>
+        <td>10/2020</td>
+    </tr>
+        <td>2.98.1-1.1</td>
+        <td>Se elimina oportunidades repetidas en bandeja de reintentos cta fan</td>
+        <td>10/2020</td>
+    </tr>
+    <tr>
+          <td>2.98.0-1.1</td>
+          <td>Correccion Flujo Cuenta FAN Firma Tradicional : Story AP-1408 : Task AP-1588</td>
+          <td>10/2020</td>
+    </tr>
+    <tr>
+          <td>2.97.0-1.1</td>
+          <td>Creación SP tipo embozado : Story AP-18597 : Task AP-19364</td>
+          <td>10/2020</td>
+    </tr>
+    <tr>
+          <td>2.96.0-1.1</td>
+          <td>Reintento Automático Gestión Error subir documento flujo fea : Story AP-15911 : Task: AP-15912</td>
+          <td>10/2020</td>
+    </tr>
+    <tr>
+          <td>2.95.0-1.1</td>
+          <td>Flujo Cuenta FAN Firma Tradicional : Story AP-1408 : Task AP-1588</td>
+          <td>10/2020</td>
+    </tr>
+    <tr>
+         <td>2.94.0-1.1</td>
+         <td>AP-15549 Servicio para FEA en Sitio Privado</td>
+         <td>10/2020</td>
+    </tr>
+    <tr>
+          <td>2.93.0-1.2</td>
+          <td>Homologacion Caducidad de Oportunidad/Producto en Vta Personas y Empresas : Story CDNPCOR-2023 : Task CDNPCOR-2315</td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+          <td>2.92.0-1.1</td>
+          <td>Homologacion Caducidad de Oportunidad/Producto en Vta Personas y Empresas : Story CDNPCOR-2023 : Task CDNPCOR-2315</td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+          <td>2.91.0-2.2</td>
+          <td>Correcciones Caducidad de Oportunidad/Producto en Vta Personas y Empresas : Story CDNPCOR-2023 : Task CDNPCOR-2315</td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+          <td>2.90.0-1.1</td>
+          <td>Correcciones Caducidad de Oportunidad/Producto en Vta Personas y Empresas : Story CDNPCOR-2023 : Task CDNPCOR-2315</td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+          <td>2.89.0-2.1</td>
+          <td>Incorporacion catalogo tareas, Caducidad de Oportunidad/Producto en Vta Personas y Empresas : Story CDNPCOR-2023 : Task CDNPCOR-2315</td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+          <td>2.88.0-1.1</td>
+          <td>Propiedades Caducidad de Oportunidad/Producto en Vta Personas y Empresas : Story CDNPCOR-2023 : Task CDNPCOR-2315</td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+          <td>2.87.0-1.1</td>
+          <td>Listado Caducidad de Oportunidad/Producto en Vta Personas y Empresas : Story CDNPCOR-2023 : Task CDNPCOR-2315</td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+          <td>2.86.0-1.2</td>
+          <td>Se agregan columnas a la tabla BPM_OPERACIONES</td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+          <td>2.85.1-1.1</td>
+          <td>Correccion SP_OPORTUNIDADES_APODERADO, se agrega limite en los reqistros</td>
+          <td>10/2020</td>
+    </tr>
+    <tr>
+           <td>2.85.0-1.4</td>
+           <td> AP-11997
+                Resolucion incidentes FAN: Reintentar Packing y Reintentar Curse
+                Error Originacion</td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+           <td>2.84.0-2.2</td>
+           <td> AP-8909
+              Reintentar Oportunidad FAN: 2. Pestaóa "Por reintentar"</td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+           <td>2.83.3-1.1</td>
+           <td> Mejora producción para disminuir tiempo en producto firmado FEA </td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+           <td>2.83.2-1.4</td>
+           <td>Fix producción mejoras Oportunidades FAN</td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+          <td>2.83.0-1.1</td>
+          <td>CDNPCOR-2593 Actualización de P&D (Packing y Delivery)</td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+          <td>2.82.0-1.1</td>
+          <td>AP-1685 Actualizacion interfaz para PyD</td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+          <td>2.81.0-2.2</td>
+          <td>AP-1685 Actualizacion interfaz para PyD</td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+          <td>2.80.0-1.1</td>
+          <td>AP-3932 Se modifica formato de fecha para el campo de fecha_operacion</td>
+           <td>08/2020</td>
+    </tr>
+    <tr>
+          <td>2.79.1-1.1</td>
+          <td>CIP-2040 se agregan los campos estado y abreviadoTemplate en el SP SP_BDJ_LST_PRODUCTOS_OP_R17_01</td>
+          <td>14/07/2020</td>
+    </tr>
+    <tr>
+          <td>2.79.0-2.5</td>
+          <td>Insert Usuarios Apoderado para Firmar con TOC</td>
+          <td>17/07/2020</td>
+    </tr>
+    <tr>
+          <td>2.79.0-1.4</td>
+          <td>Correccion Flujo Fea - Cambios de BBDD : Story CDNPCRIES-249 : Task CDNPCRIES-334</td>
+           <td>17/07/2020</td>
+    </tr>
+    <tr>
+          <td>2.78.0-2.4</td>
+          <td>Flujo Fea - Cambios de BBDD : Story CDNPCRIES-249 : Task CDNPCRIES-334</td>
+           <td>17/07/2020</td>
+    </tr>
+    <tr>
+          <td>2.77.0-1.1</td>
+           <td>CDNPCOR-3016 Firma Apoderado Banco: Pestañas con Oportunidades
+           task: CDNPCOR-3045 Listar oportunidades con errores</td>
+           <td>17/07/2020</td>
+    </tr>
+    <tr>
+        <td>2.76.0-1.1</td>
+        <td>Correccion Firma Apoderado: Oportunidad en estado 'Pendiente de Firma de Apoderado' : Story CDNPCOR-2526 : Task CDNPCOR-2797 CDNPCOR-2798</td>
+      <td>17/07/2020</td>
+    </tr>
+    <tr>
+        <td>2.75.0-1.2</td>
+        <td>CDNPCOR Actualización SP Oportunidad Apoderados y SP Firma Apoderado T Get</td>
+        <td>17/07/2020</td>
+    </tr>
+    <tr>
+        <td>2.44.0-1.5</td>
+        <td>CDNPCOR-2915 Firma Apoderado Banco: Proceso Asincrono</td>
+        <td>17/07/2020</td>
+    </tr>
+    <tr>
+        <td>2.73.0-1.1</td>
+        <td>CDNPCOR-2915 Firma Apoderado Banco: Proceso Asincrono</td>
+        <td>17/07/2020</td>
+    </tr>
+    <tr>
+        <td>2.22.0-2.4</td>
+        <td>Firma Apoderado: Oportunidad en estado 'Pendiente de Firma de Apoderado' : Story CDNPCOR-2526 : Task CDNPCOR-2797 CDNPCOR-2798
+         actualización SP Oportunidad Apoderado</td>
+        <td>17/07/2020</td>
+    </tr>
+    <tr>
+        <td>2.71.0-2.4</td>
+        <td>CDNPCOR-2835 Firma Apoderado Banco: Funcionalidades del Token</td>
+        <td>17/07/2020</td>
+    </tr>
+        <tr>
+			<td>2.70.0-1.1</td>
+            <td>CDNPCOR-2903 Indice "VENTA_CN"."COP_ORIGINACION" </td>
+          <td>07/2020</td>
+    	</tr>
+        <tr>
+			<td>2.69.0-1.1</td>
+            <td>Se crea procedimiento SP_ELIMINA_CDNTAR</td>
+          <td>05/2020</td>
+		</tr>
+        <tr>
+ 		    <td>2.68.0-1.1</td>
+            <td>Agregar columnas de regla flujo curse en el producto de la consulta oportunidad</td>
+            <td>05/2020</td>
+      	</tr>
+        <tr>
+    		<td>2.67.0-1.1</td>
+            <td>Administración de Oportunidades por Súper usuarios : Story CDNPCOR-559 : Task CDNPCOR-2119</td>
+            <td>05/2020</td>
+    	</tr>
+        <tr>
+    		<td>2.66.0-1.2</td>
+            <td>Homologacion piezas para Calculo de campo red: Story: CDNPCBANOP-28 - Tarea: CDNPCBANOP-515</td>
+            <td>05/03/2020</td>
+      	</tr>
+      	<tr>
+      	    <td>2.65.0-1.1</td>
+            <td>CDNPCOR-2549 Restricción de oportunidad FAN en proceso</td>
+            <td>05/2020</td>
+        </tr>
+        <tr>
+        	<td>2.64.0-1.1</td>
+            <td>CDNPCOR-2518 -  Verificar si el cliente ha firmado con FEA</td>
+            <td>05/2020</td>
+        </tr>
+        <tr>
+     		<td>2.63.0-1.1</td>
+            <td> </td>
+            <td>04/2020</td>
+        </tr>
+        <tr>
+		   <td>2.62.0-1.1</td>
+           <td>Creación de SP para traer id de oportunidad en base a un credito : Story AP-21 : Task AP-456</td>
+           <td>04/2020</td>
+        </tr>
+        <tr>			   <td>2.61.1-1.1</td>
+            <td>
+                En Procedimiento SP_BDJ_LST_PRODUCTOS_OP_R17_01 se modifica campo ATRIBUTOS para retornar área de Usuario desde PERFIL_CN, en caso de venir Nulo en la Tarea 'Evaluar Riesgo' - Incidente: CIP-1697
+			</td>
+          <td>05/03/2020</td>
+		</tr>
+         <tr>
+			<td>2.61.0-1.3</td>
+            <td>
+                Cuenta FAN Presencial + incidencia : Story CDNPCOR-2472 : Task CDNPCOR-2473
+			</td>
+          <td>05/03/2020</td>
+		</tr>
+        <tr>
+			<td>2.60.0-1.2</td>
+            <td>
+                Creación de tabla para enlazar idOportunidad con idCredito : Story AP-20 : Task AP-61
+			</td>
+          <td>??/03/2020</td>
+		</tr>
+        <tr>
+			<td>2.59.0-1.2</td>
+            <td>
+                Administración de Oportunidades por Súper usuarios : Story CDNPCOR-559 : Task CDNPCOR-21199
+			</td>
+          <td>05/03/2020</td>
+		</tr>
+        <tr>
+			<td>2.58.0-1.2</td>
+            <td>
+                Agregar columnas de regla flujo curse en el producto de la consulta oportunidad
+			</td>
+          <td>05/03/2020</td>
+		</tr>
+        <tr>
+			<td>2.57.0-1.3</td>
+            <td>
+                Cuenta FAN Presencial : Story CDNPCOR-2472 : Task CDNPCOR-2473
+			</td>
+          <td>05/03/2020</td>
+		</tr>
+    	<tr>
+			<td>2.56.0-1.5</td>
+            <td>
+            	Se crea SP_COP_BUSQUEDA_ORIGINACION, SP_COP_GET_ORIGINACION_BY_ID, SP_COP_DETALLE_ORIGINACION, SP_COP_GET_DATOS_ADICIONALES, SP_COP_OBTENER_MENSAJE
+			</td>
+          <td>05/03/2020</td>
+		</tr>
+    	<tr>
+			<td>2.55.0-1.1</td>
+            <td>
+            	Se crea tabla Redestino_tc y procedimientos SP_TC_INSERTAR_REDESTINO, SP_TC_OBTENER_REDESTINO
+			</td>
+          <td>05/03/2020</td>
+		</tr>
+    	<tr>
+			<td>2.54.0-1.2</td>
+            <td>
+            	Se Modifican procedimiento SP_VNT_PyD_CABECERA_EMPRESA y SP_VNT_PyD_DETALLE_EMPRESA
+			</td>
+          <td>01/2020</td>
+		<td>01/2020</td>
+		</tr>
+        <tr>
+			<td>2.53.0-1.1</td>
+            <td>
+            	Se crea funcion  FN_ObtieneCanal
+			</td>
+          <td>07/01/2020</td>
+		</tr>
+        <tr>
+    		<td>2.52.0-1.2</td>
+            <td>
+            	Creacion nuevo servicio - Actualizacion Producto
+    		</td>
+            <td>16/12/2019</td>
+		</tr>
+		<tr>
+			<td>2.51.0-1.1</td>
+            <td>
+            	Se modifica SP_VNT_PyD_CABECERA_EMPRESA
+				</td>
+          <td>13/12/2019</td>
+		</tr>
+        <tr>
+    		<td>2.50.0-1.1</td>
+            <td>
+            	Se modifica SP_VNT_PyD_CABECERA_EMPRESA
+			</td>
+            <td>13/12/2019</td>
+		</tr>
+       	<tr>
+    		<td>2.49.0-1.1</td>
+            <td>
+            	Se modifica procedimiento SP_VNT_PyD_DETALLE_EMPRESA
+			</td>
+            <td>01/2020</td>
+		</tr>
+       	<tr>
+    		<td>2.48.0-1.1</td>
+            <td>
+            	Optimizacion Tablas - Creacion Indice : ID_AUTORIZACION
+			</td>
+            <td>12/12/2019</td>
+		</tr>
+    	<tr>
+    		<td>2.47.0-1.1</td>
+            <td>
+            	Correccion Integridad de datos : Story VTAPYME-127 : Task VTAPYME-2113
+			</td>
+            <td>12/12/2019</td>
+		</tr>
+    	<tr>
+    		<td>2.46.0-2.10</td>
+            <td>
+            	Caducidad de Oport./Prod.en Vta Personas y Empresas: Story: CDNPCOR-2023 - 				Tarea:CDNPCOR-2315
+			</td>
+            <td>10/12/2019</td>
+		</tr>
+    	<tr>
+    		<td>2.45.0-2.4</td>
+            <td>
+            	Calculo de campo red: Story: CDNPCBANOP-28 - Tarea: CDNPCBANOP-515
+			</td>
+            <td>10/12/2019</td>
+		</tr>
+    	<tr>
+    		<td>2.44.0-1.2</td>
+            <td>
+            	Se modifica mapeo de campos de los procedimientos SP_VNT_PyD_CABECERA_EMPRESA y SP_VNT_PyD_DETALLE_EMPRESA
+			</td>
+            <td>10/12/2019</td>
+		</tr>
+        <tr>
+    		<td>2.43.0-2.4</td>
+            <td>
+            	Actualizacion servicio tarjetas adicionales : Story VTAPYME-2069 : Task VTAPYME-2085
+				Creacion servicio actualizacion sub productos : Story VTAPYME-596 : Task VTAPYME-2073
+				Fecha de la Oportunidad : Story VTAPYME-1509 : Task VTAPYME-1874
+			</td>
+            <td>10/12/2019</td>
+		</tr>
+    	<tr>
+    		<td>2.42.0-3.2</td>
+            <td>PyD: Se crean Tablas TMP_CABECERA_SET y TMP_DETALLE_SET, Procedimientos SP_VNT_PyD_CABECERA_EMPRESA y SP_VNT_PyD_DETALLE_EMPRESA.</td>
+            <td>03/12/2019</td>
+		</tr>
+    	<tr>
+    		<td>2.41.0-1.2</td>
+            <td>DIG: funciones FN_DIGADEP_Valida_Automatico y FN_DIGADEP_Valida_Manual.</td>
+            <td>03/12/2019</td>
+		</tr>
+    	<tr>
+    		<td>2.40.0-2.6</td>
+            <td>Correciones SP ligados a la actualizacion de datos de usuario operador y ejecutivo mod + Actualización nombre tarea "Curse Manual"</td>
+            <td>27/11/2019</td>
+		</tr>
+    	<tr>
+    		<td>2.39.0-3.1</td>
+            <td>Implementación del campo Red Oportunidad: Story: CDNPCBANOP-28 y CDNPCOR-757 - Tarea: CDNPCBANOP-515 y CDNPCOR-2118</td>
+            <td>27/11/2019</td>
+		</tr>
+     	<tr>
+    		<td>2.38.0-1.2</td>
+            <td>Anular en Originación : Story: CDNPCCRED-1128 - Tarea CDNPCCRED-2233</td>
+            <td>27/11/2019</td>
+		</tr>
+     	<tr>
+    		<td>2.37.0-8.3</td>
+            <td>Se crea Procedimiento SP_CONSULTA_OPORTUNIDAD. On-Boarding : ON-4 HU 3.- Flujo de FEA versión 1 <br/>
+			Incorporación de Marca en los productos firmados electrónicamente : Story ON-5 : Task ON-26<br/>
+			Actualizacion de Reglas OnBoarding<br/>
+			Actualizacion de Reglas Metodo Venta : Story ON-5 : Task ON-26<br/>
+			Actualizacion reglas atribuciones y aprobaciones : Story ON-5 : Task ON-26<br/>
+			Se agrega SP Actualizar FEA: Story ON-5 : Task ON-26 |  Ajuste OnBoarding SP_BPM_RETORNA_FLUJO_CURSE | Script de incidentes en reglas TipoVisado: INC2641145 - Story: CIP-1702 - BPMGTask CIP-1709 | INC2636599 - Story: CIP-1698 - BPMGTask CIP-1705</td>
+            <td>25/11/2019</td>
+		</tr>
+     	<tr>
+    		<td>2.36.0-1.3</td>
+            <td>Bandeja: Historias: CDNPCBANOP-15 , CDNPCBANOP-276 y CDPCBANOP_519</td>
+            <td>14/11/2019</td>
+		</tr>
+		<tr>
+    		<td>2.35.0</td>
+            <td>Correcciones Flujo Curse Electronico : Story CDNPCOR-757 : Tarea CDNPCOR-2118</td>
+            <td>24/10/2019</td>
+		</tr>
+        <tr>
+    		<td>2.34.0</td>
+            <td>Flujo Curse Electronico : Story CDNPCOR-757 : Tarea CDNPCOR-2118</td>
+            <td>24/10/2019</td>
+		</tr>
+    	<tr>
+    		<td>2.33.0</td>
+            <td>Notificaciones y Facilitadores : Story CDNPCOR-1215 : Tarea CDNPCOR-2183</td>
+            <td>24/10/2019</td>
+		</tr>
+    	<tr>
+            <td>2.32.0</td>
+            <td>Configuración de Administradores Banconexion 2.0 Pyme : Tarea VTAPYME-1557 : Story VTAPYME-576</td>
+            <td>24/10/2019</td>
+		</tr>
+    	<tr>
+            <td>2.31.0</td>
+            <td>Modificar Dominio DA x Producto Venta Empresas: Technical story cdn VTAPYME-1594</td>
+            <td>05/09/2019</td>
+		</tr>
+        <tr>
+            <td>2.30.0</td>
+            <td>Derivacion en Tiempo de Riesgo : Story CDNPCOR-2165 : Tarea CDNPCOR-2117</td>
+            <td>27/08/2019</td>
+		</tr>
+        <tr>
+            <td>2.29.0</td>
+            <td>Actualizar oportunidad - Atributos y Subproductos Simulación Créditos : Tarea CDNPCCRED-2132</td>
+            <td>26/08/2019</td>
+		</tr>
+     	<tr>
+            <td>2.28.0</td>
+            <td>Configuración de Administradores Banconexion 2.0 Pyme : Tarea VTAPYME-1557 : Story VTAPYME-576</td>
+            <td>22/08/2019</td>
+		</tr>
+        <tr>    
+            <td>2.27.0</td>
+            <td>Al insertar una activacion, se le cargan los datos adicionales de la originacion CDNPCOR-2114</td>
+            <td>04/09/2019</td>
+		</tr>
+        <tr>
+            <td>2.26.0</td>
+            <td>Actualizar oportunidad - Atributos y Subproductos Simulación Créditos : Tarea CDNPCCRED-2132 : Story CDNPCCRED-2121</td>
+            <td>16/08/2019</td>
+		</tr>
+        <tr>
+            <td>2.25.0</td>
+            <td>Se crean Procedimientos SP_BDJ_LST_CTLGO_ASGND_R17_02 y SP_BDJ_LST_OP_OPERACION_R17_02 : Historia CCDNPCBANOP-283</td>
+            <td>09/09/2019</td>
+		</tr>
+        <tr>
+            <td>2.24.0</td>
+            <td>Productos asociados - Orden curse productos : Tarea CDNPCOR-1915 : Story CDNPCOR-1215</td>
+            <td>08/08/2019</td>
+		</tr>
+         <tr>
+            <td>2.23.0</td>
+            <td>Se Corrige SP_BDJ_LST_OP_COMERCIAL_R17_00 Historia: CDNPCBANOP-279</td>
+            <td>08/08/2019</td>
+		</tr>
+        <tr>
+            <td>2.22.0</td>
+            <td>Se agrega nuevas reglas de atribuciones. Tarea BPM: CDNPCOR-2115</td>
+            <td>01/08/2019</td>
+		</tr>
+	    <tr>
+            <td>2.21.0</td>
+            <td>Se crea SP SP_BDJ_LST_OP_OPERACION_R17_00: CIP-1323,SP_BDJ_LST_CTLGO_ASGND_R17_01:CIP-1323,SP_BDJ_LST_OP_OPERACION_R17_01: CIP-1422</td>
+            <td>30/07/2019</td>
+		</tr>
+        <tr>
+            <td>2.20.0</td>
+            <td>se solventa defecto CDNPCOR-2127</td>
+            <td>01/08/2019</td>
+		</tr>
+        <tr>
+            <td>2.19.0</td>
+            <td>Se actualiza Procedimiento SP_BPM_BUSCA_COMENT_OPORT.</td>
+            <td>19/07/2019</td>
+		</tr>
+    	<tr>
+            <td>2.18.0</td>
+            <td>Actualizacion a Codigo Referencia Producto - Tarea CDNPCOR-1469 - Story CDNPCCRED-1298</td>
+            <td>11/07/2019</td>
+		</tr>
+        <tr>
+            <td>2.17.0</td>
+            <td>Orden curse de Productos - CDNPCOR-1915</td>
+            <td>03/07/2019</td>
+		</tr>
+        <tr>
+            <td>2.16.0</td>
+            <td>Apoyo paso a Bugfixed CIP-1235 : Tarea CDNPCOR-1562</td>
+            <td>03/07/2019</td>
+		</tr>
+        <tr>
+            <td>2.15.0</td>
+            <td>Actualizacion Datos de Oportunidad : Tarea CDNPCOR-1914</td>
+            <td>26/06/2019</td>
+		</tr>
+        <tr>
+            <td>2.14.0</td>
+            <td>Actualizacion a Codigo Referencia Producto Empresas - Tarea CDNPCOR-1469 - Story CDNPCCRED-1298</td>
+            <td>26/06/2019</td>
+		</tr>
+    	<tr>
+            <td>2.13.0</td>
+            <td>Actualizacion Reglas Aprobacion - Regla Creditos : Tarea CDNPCOR-1913</td>
+            <td>13/06/2019</td>
+		</tr>
+        <tr>
+        	<td>2.12.0</td>
+            <td>Modificacion piezas para incluir Excepciones Comerciales : Tarea CDNPCOR-1532</td>
+            <td>10/06/2019</td>
+		</tr>
+            <td>2.11.0</td>
+            <td>Correccion incidencia produccion : Incidencia CIP-1454 y Defecto QA de Previsado Empresas</td>
+            <td>10/06/2019</td>
+		</tr>
+	    <tr>
+            <td>2.10.0</td>
+            <td>Solución defecto QA CDNPCOR-1194</td>
+            <td>31/05/2019</td>
+		</tr>
+        <tr>
+            <td>2.9.0</td>
+            <td>Actualizacion definicio id reservas : Tarea CDNPCOR-1808</td>
+            <td>31/05/2019</td>
+		</tr>
+    	<tr>
+            <td>2.8.0</td>
+            <td>Actualizacion Reglas : Tarea CDNPCOR-1530</td>
+            <td>31/05/2019</td>
+		</tr>
+        <tr>
+            <td>2.7.0</td>
+            <td>Actualizacion piezas para retorno de atribucion. : Tarea CDNPCOR-863</td>
+            <td>24/05/2019</td>
+		</tr>
+        <tr>
+            <td>2.6.0</td>
+            <td>Se corrige defecto tarea CDNPCOR-1662</td>
+            <td>14/05/2019</td>
+		</tr>
+        <td>2.5.0</td>
+            <td>Se actualizan SPs, funcion y data para Regla OFAC</td>
+            <td>22/05/2019</td>
+		</tr>
+        <tr>
+            <td>2.4.0</td>
+            <td>Se retorna idReserva productos oportunidad en tiempo 1</td>
+            <td>10/05/2019</td>
+		</tr>
+        <tr>
+            <td>2.3.0</td>
+            <td>Este Release no aplica por Certificacion incorrecta</td>
+            <td>10/05/2019</td>
+		</tr>
+        <tr>
+            <td>2.2.0</td>
+            <td>Se crea tabla TBL_CTRL_INTERFACES y se insertan registros</td>
+            <td>08/05/2019</td>
+		</tr>   
+        <tr>
+            <td>2.1.0</td>
+            <td>Se actualiza SP para retornar id_reserva</td>
+            <td>16/04/2019</td>
+		</tr>     
+    	<tr>
+            <td>2.0.0</td>
+            <td>Se crea vista BPM_VIEW_RSGO_OPER</td>
+            <td>11/04/2019</td>
+		</tr>  
+    	<tr>
+            <td>1.109.0-1.1</td>
+            <td>Se agrega nuevo sp de comentarios</td>
+            <td>08/02/2019</td>
+		</tr>                    
+   		 <tr>
+            <td>1.108.0-1.2</td>
+            <td>Se corrige acción anular en tareas curse previo a visado</td>
+            <td>08/02/2019</td>
+		</tr>
+    	<tr>
+            <td>1.107.0-1.2</td>
+            <td>Se corrige guardado avales</td>
+            <td>08/02/2019</td>
+		</tr>
+    	<tr>
+            <td>1.106.0-1.1</td>
+            <td>Se corrige siguiente tarea</td>
+            <td>08/02/2019</td>
+		</tr>
+    	<tr>
+            <td>1.105.0-1.1</td>
+            <td>Se agrega nombre producto a salida de sp SP_BPM_SLTUD_AUTORIZACION_R19</td>
+            <td>15/12/2018</td>
+		</tr>
+    	<tr>
+            <td>1.104.0-1.2</td>
+            <td>Se agrega nueva tarea reintentar packing para el caso en que falla originación (Curse anterior a visado)</td>
+            <td>15/12/2018</td>
+		</tr>
+    	<tr>
+            <td>1.103.0-1.2</td>
+            <td>Corrige guardado tarea curse anticipado</td>
+            <td>15/12/2018</td>
+		</tr>
+    	<tr>
+            <td>1.102.0-1.1</td>
+            <td>Corrige llamado funcion en SP_BPM_EMP_BUSCA_PROD_BY_O_R19 </td>
+            <td>15/12/2018</td>
+		</tr>
+    	<tr>
+            <td>1.101.0-1.1</td>
+            <td>Se modifica FN_BPM_EMP_SIGUIENTE_TAREA permitiendo retornar el codigo de tarea</td>
+            <td>15/12/2018</td>
+		</tr>
+    	<tr>
+            <td>1.100.0-1.2</td>
+            <td>Se crea nueva FN_BPM_EMP_SIGUIENTE_TAREA y modifica sp SP_BPM_EMP_BUSCA_PROD_BY_O_R19 para obtener la siguiente tarea del proceso</td>
+            <td>15/12/2018</td>
+		</tr>
+        <tr>
+            <td>1.99.0-1.1</td>
+            <td>Correccion procedimiento: se cambian tipo de datos en SP_COP_INSERTAR_SUBETAPA</td>
+            <td>15/12/2018</td>
+        </tr>
+		<tr>
+            <td>1.98.0-1.1</td>
+            <td>Se corrige FN_BPM_REGLAS_BPM_R19 regla de curse anterior a visado</td>
+            <td>15/12/2018</td>
+        </tr>
+    	<tr>
+            <td>1.97.0-1.2</td>
+            <td>Se corrige inhabilidades en SP_BPM_SLTUD_AUTORIZACION_R19 y funcion FN_BPM_REGLAS_BPM_R19</td>
+            <td>15/12/2018</td>
+        </tr>
+        <tr>
+            <td>1.96.0-1.1</td>
+            <td>Se agrega la columna comentario a la tabla BPM_OPERACIONES</td>
+            <td>15/12/2018</td>
+        </tr>
+        <tr>
+            <td>1.95.0-1.6</td>
+            <td>Se actualiza el campo datos_tarjeta de la tabla BPM_OPERACIONES con la información del campo request_producto</td>
+            <td>15/12/2018</td>
+        </tr>
+        <tr>
+            <td>1.94.0-1.7</td>
+            <td>Adaptación de procedimientos para utilizar campo COMENTARIO de la tabla BPM_OPERACIONES</td>
+            <td>15/12/2018</td>
+        </tr>
+        <tr>
+            <td>1.93.0-1.1</td>
+            <td>Corrección SP_COP_GUARDAR_ESTADO</td>
+            <td>15/12/2018</td>
+        </tr>
+        <tr>
+            <td>1.92.0-1.1</td>
+            <td>Corrección procedimiento: Orden de columnas en SP_BPM_AGREGAR_TAREA_R18</td>
+            <td>15/12/2018</td>
+        </tr>
+        <tr>
+            <td>1.91.0-1.1</td>
+            <td>Corrección procedimiento: Faltaba un campo en el select del procedimiento sp_bpm_busca_oportunidad</td>
+            <td>15/12/2018</td>
+        </tr>
+        <tr>
+            <td>1.90.0-1.1</td>
+            <td>Corrección procedimiento: Faltaba un campo en el insert</td>
+            <td>30/11/2018</td>
+        </tr>
+        <tr>
+            <td>1.89.0-3.1</td>
+            <td>remodelado de originacion</td>
+            <td>30/11/2018</td>
+        </tr>
+        <tr>
+            <td>1.88.0-2.11</td>
+            <td>Release 19 (EMP).</td>
+            <td>15/11/2018</td>
+        </tr>   
+        <tr>
+            <td>1.87.0-2.18</td>
+            <td>Release 19 (PERS).</td>
+            <td>11/10/2018</td>
+        </tr>
+        <tr>
+            <td>1.86.2-1.2</td>
+            <td>Fix historicos Bandeja Comercial</td>
+            <td>29/01/2019</td>
+        </tr>
+        <tr>
+            <td>1.86.1-1.6</td>
+            <td>Fixs IRs Asignados</td>
+            <td>11/12/2018</td>
+        </tr>    
+        <tr>
+            <td>1.86.0-1.1</td>
+            <td>Cambios de Asignado del producto en la oportunidad</td>
+            <td>11/10/2018</td>
+        </tr>     
+        <tr>
+            <td>1.85.0-1.1</td>
+            <td>Se incluye parametro en Agregar Producto (EMP).</td>
+            <td>28/08/2018</td>
+        </tr>      
+        <tr>
+            <td>1.84.0-1.3</td>
+            <td>Se modifica variable de retorno TIPO_VISADO.</td>
+            <td>16/08/2018</td>
+        </tr>      
+        <tr>
+            <td>1.83.0-1.1</td>
+            <td>Se cambia nombre de tare a solicitud de usuario.</td>
+            <td>09/08/2018</td>
+        </tr>       
+        <tr>
+            <td>1.82.0-1.4</td>
+            <td>Se incluye atributo en campo AUTORIZACIONES de BPM_OPORTUNIDAD.</td>
+            <td>09/08/2018</td>
+        </tr>   	
+        <tr>
+            <td>1.81.0-1.1</td>
+            <td>Se incluye campo atributo en SP_BPM_EMP_ACT_REQUEST_PROD (Empresas).</td>
+            <td>09/08/2018</td>
+        </tr>      
+        <tr>
+            <td>1.80.0-1.3</td>
+            <td>Se modifica obtener regla previsado (Empresas).</td>
+            <td>02/08/2018</td>
+        </tr>    
+        <tr>
+            <td>1.79.0-1.1</td>
+            <td>Actualizaci&oacute;n de filtro 'decisi&oacute;n' para procedimiento de RIESGO</td>
+            <td>02/08/2018</td>
+        </tr>
+        <tr>
+            <td>1.78.0-1.1</td>
+            <td>Actualizaci&oacute;n de SP SP_BPM_EMP_CREA_OPORTUNIDAD</td>
+            <td>02/08/2018</td>
+        </tr>
+        <tr>
+            <td>1.77.0-1.7</td>
+            <td>Actualizaciones de SP's: Filtros para decision y unidad en bandejas</td>
+            <td>24/07/2018</td>
+        </tr>
+        <tr>
+            <td>1.76.0-1.1</td>
+            <td>Se restituye uso de la etapa de la tarea.</td>
+            <td>24/07/2018</td>
+        </tr>
+        <tr>
+            <td>1.75.0-1.1</td>
+            <td>Modificaci&oacute;n SP Solicitud Autorizaci&oacute;n (se incluye email del ejecutivo).</td>
+            <td>24/07/2018</td>
+        </tr>
+        <tr>
+            <td>1.74.0-1.3</td>
+            <td>Modificaci&oacute;n SP RETORNA_REGLAS. Se sustituye ID_prod x Id_Bpm.</td>
+            <td>24/07/2018</td>
+        </tr>
+        <tr>
+            <td>1.73.0-1.3</td>
+            <td>Actualizaciones de SP's: Históricos de asignados y no asignados</td>
+            <td>12/07/2018</td>
+        </tr>
+        <tr>
+            <td>1.72.0-1.5</td>
+            <td>Actualizaciones SPs Release 18 (empresas).</td>
+            <td>24/07/2018</td>
+        </tr>
+        <tr>
+            <td>1.71.0-1.3</td>
+            <td>Actualizaciones de SP's: Para usuarios no asignados en bandejas</td>
+            <td>10/07/2018</td>
+        </tr>
+        <tr>
+            <td>1.70.0-1.6</td>
+            <td>Actualizaciones de SP's: Históricos de oportunidades en bandejas</td>
+            <td>05/07/2018</td>
+        </tr>
+        <tr>
+            <td>1.69.0-1.6</td>
+            <td>Actualizaciones de SP's para asignaciones de usuarios en bandejas</td>
+            <td>26/06/2018</td>
+        </tr>
+        <tr>
+            <td>1.68.0-1.5</td>
+            <td>Se incluye en sp agregar tarea campo ID_ORIGEN</td>
+            <td>26/06/2018</td>
+        </tr>
+        <tr>
+            <td>1.67.0-1.6</td>
+            <td>Actualizaciones de SP's para asignaciones de usuarios en bandejas</td>
+            <td>26/06/2018</td>
+        </tr>
+        <tr>
+            <td>1.66.0-1.6</td>
+            <td>Actualizaciones de SP's para asignaciones de usuarios en bandejas</td>
+            <td>26/06/2018</td>
+        </tr>
+        <tr>
+            <td>1.65.0-1.2</td>
+            <td>SP Lista resultados evaluaciones del cliente.</td>
+            <td>26/06/2018</td>
+        </tr>
+        <tr>
+            <td>1.64.0-7.9</td>
+            <td>L&iacute;a base Empresas</td>
+            <td>26/06/2018</td>
+        </tr>
+        <tr>
+            <td>1.63.0-1.7</td>
+            <td>Modificaci&oacute;n SP's para asignaci&oacute;n de usuarios en bandeja</td>
+            <td>22/06/2018</td>
+        </tr>
+        <tr>
+           <td>1.62.0-1.1</td>
+           <td>Se suprime par&aacute;metro CODIGO_ETAPA a SP agragar tarea.</td>
+           <td>19/06/2018</td>
+        </tr>
+        <tr>
+            <td>1.61.0-1.1</td>
+            <td>Cambio de alias de tarea: de "Enviar a previsado" a "Subir documentos de Curse".</td>
+            <td>19/06/2018</td>
+        </tr>
+        <tr>
+            <td>1.60.0-1.1</td>
+            <td>Se Agrega tipo de documentos 3, otros documentos.</td>
+            <td>19/06/2018</td>
+        </tr>
+    	<tr>
+            <td>1.59.0-1.1</td>
+            <td>Actualizaci&oacute;n sp para ordernar oportunidad por fecha DESC.</td>
+            <td>14/06/2018</td>
+        </tr>
+        <tr>
+            <td>1.58.0-2.4</td>
+            <td>Nuevo sp para cancelar oportunidad.</td>
+            <td>07/06/2018</td>
+        </tr>
+        <tr>
+            <td>1.57.0-1.1</td>
+            <td>Actualizaci&oacute;n data de configuracion de reglas.</td>
+            <td>24/05/2018</td>
+        </tr>
+        <tr>
+            <td>1.56.0-1.1</td>
+            <td>Modificaci&oacute;n data de regla TIPO_VISADO.</td>
+            <td>22/05/2018</td>
+        </tr>
+        <tr>
+            <td>1.55.0-1.1</td>
+            <td>Modificaci&oacute;n crtiterio de b&uacute;squeda de rut de agentes.</td>
+            <td>22/05/2018</td>
+        </tr>
+        <tr>
+            <td>1.54.0-1.5</td>
+            <td>Actualizaci&oacute;n de montos en d&oacute;lares para la bandeja de oportunidades</td>
+            <td>22/05/2018</td>
+        </tr>
+        <tr>
+            <td>1.53.0-1.3</td>
+            <td>Modificaci&oacute;n Agrupamiento de autorizaciones.</td>
+            <td>22/05/2018</td>
+        </tr>
+        <tr>
+            <td>1.52.0-1.7</td>
+            <td>Modificacion y Nuevos de Procedimientos Bandeja de Oportunidades Asignado.</td>
+            <td>10/04/2018</td>
+        </tr>
+        <tr>
+            <td>1.51.0-2.2</td>
+            <td>Modificacion SP actualizar comentario (se incluye marca de eliminado).</td>
+            <td>26/04/2018</td>
+        </tr>
+        <tr>
+            <td>1.50.0-1.1</td>
+            <td>Modificacion SP actualizar comentario.</td>
+            <td>26/04/2018</td>
+        </tr>
+        <tr>
+            <td>1.49.0-2.2</td>
+            <td>Nuevo campo para ejecutivos relacionados a la venta.</td>
+            <td>26/04/2018</td>
+        </tr>
+        <tr>
+            <td>1.48.0-1.8</td>
+            <td>Actualizacion configuracion de tareas.</td>
+            <td>26/04/2018</td>
+        </tr>
+        <tr>
+            <td>1.47.0-1.5</td>
+            <td>Se modifican variables de resultado.</td>
+            <td>26/04/2018</td>
+        </tr>
+        <tr>
+            <td>1.46.0-1.2</td>
+            <td>Se modifica SP de ACT_FECHA_FIN.</td>
+            <td>26/04/2018</td>
+        </tr>
+        <tr>
+            <td>1.45.0-6.8</td>
+            <td>Parametrizacion reglas BPM.</td>
+            <td>26/04/2018</td>
+        </tr>
+        <tr>
+            <td>1.44.0-1.5</td>
+            <td>Se incluyen nuevos campos: DATOS_BACTH y TOKEN.</td>
+            <td>10/04/2018</td>
+        </tr>
+        <tr>
+            <td>1.43.1-1.4</td>
+            <td>Se cambia pk de tabla VNT_PRODUCTOS_COMPRA y se crea indice.</td>
+            <td>07/05/2018</td>
+        </tr>
+        <tr>
+            <td>1.43.0-1.1</td>
+            <td>Se integra columna para estado documentos previsado.</td>
+            <td>05/04/2018</td>
+        </tr>
+        <tr>
+            <td>1.42.0-1.1</td>
+            <td>Se excluyen del proceso eliminar los productos en espera de curse.</td>
+            <td>27/03/2018</td>
+        </tr>
+        <tr>
+            <td>1.41.0</td>
+            <td>Modificacion regla patrocinio.</td>
+            <td>20/03/2018</td>
+        </tr>
+        <tr>
+            <td>1.40.0</td>
+            <td>Modificacion SP SP_BPM_SOLICITUD_AUTORIZACION por cambio en reglas de riesgo para ctas de ahorro y ctas vista.</td>
+            <td>20/03/2018</td>
+        </tr>
+        <tr>
+            <td>1.39.0</td>
+            <td>Modificacion SP SP_BPM_SOLICITUD_AUTORIZACION por cambio en reglas de riesgo</td>
+            <td>20/03/2018</td>
+        </tr>
+        <tr>
+            <td>1.38.0</td>
+            <td>se agrega nuevo campo nroFolioProducto  sp SP_RPT_LISTAR_OPORT_RIESGO, SP_RPT_LISTAR_OPORT_COM_JEF y
+                SP_BPM_LISTADO_OPORT_EXTEND</td>
+            <td>20/03/2018</td>
+        </tr>
+        <tr>
+            <td>1.37.0</td>
+            <td>Modificacion SP sp_bpm_actualiza_datos_previs por defectos 5049 y 5413</td>
+            <td>20/03/2018</td>
+        </tr>
+        <tr>
+            <td>1.36.0</td>
+            <td>Validacion de productos no instanciados</td>
+            <td>20/03/2018</td>
+        </tr>
+        <tr>
+            <td>1.35.0</td>
+            <td>Se modifica flag tieneRiesgo en SP solicitud autorizaciones</td>
+            <td>20/03/2018</td>
+        </tr>
+        <tr>
+            <td>1.34.0</td>
+            <td>Se modifica criterio de busqueda en funcion FN_BPM_REGLAS_BPM para reglas bpm</td>
+            <td>06/03/2018</td>
+        </tr>
+        <tr>
+            <td>1.33.0</td>
+            <td>Se modifica SP para busqueda de metodo de venta (caso Borde)</td>
+            <td>06/03/2018</td>
+        </tr>
+        <tr>
+            <td>1.32.0</td>
+            <td>Se modifica Listado de Tareas por Producto</td>
+            <td>06/03/2018</td>
+        </tr>
+        <tr>
+            <td>1.31.0</td>
+            <td>Se agrega nuevo filtro por usuario creador y se agrega
+                UPPER al RUT_EJECUTIVO  sp SP_RPT_LISTAR_OPORT_RIESGO y SP_RPT_LISTAR_OPORT_COM_JEF</td>
+            <td>06/03/2018</td>
+        </tr>
+        <tr>
+            <td>1.30.0</td>
+            <td>Correccion consulta de autorizaciones.</td>
+            <td>06/03/2018</td>
+        </tr>
+        <tr>
+            <td>1.29.0</td>
+            <td>Modificacion proceso de estados de previsado.</td>
+            <td>06/03/2018</td>
+        </tr>
+        <tr>
+            <td>1.28.0</td>
+            <td>Modificacion reglas de previsado.</td>
+            <td>06/03/2018</td>
+        </tr>
+        <tr>
+        <tr>
+            <td>1.27.0</td>
+            <td>Modificacion reglas DGC3 para cta de ahorro y cta corriente.</td>
+            <td>06/03/2018</td>
+        </tr>
+        <tr>
+            <td>1.26.0</td>
+            <td>Obtener oportunidades segun perfil comercial jefe y riesgo.</td>
+            <td>06/03/2018</td>
+        </tr>
+    	<tr>
+            <td>1.25.0</td>
+            <td>Agrupacion de Autorizaciones y Metodos de Venta.</td>
+            <td>06/03/2018</td>
+        </tr>
+    	<tr>
+            <td>1.24.0</td>
+            <td>Se realizan modificaciones a columna GLOSA_PROPIEDAD de tabla de  propiedades y cambio a sp SP_BPM_SOLICITUD_AUTORIZACION.</td>
+            <td>15/02/2018</td>
+        </tr>
+		<tr>
+            <td>1.23.0</td>
+            <td>Se incluye tabla de propiedades y su procedimiento almacenado respectivo.</td>
+            <td>06/02/2018</td>
+        </tr>
+        <tr>
+            <td>1.22.0</td>
+            <td>Corrección en sub-consulta para obtener id oportunidades con productos por familia de producto</td>
+            <td>06/02/2018</td>
+        </tr>
+        <tr>
+            <td>1.21.0</td>
+            <td>Se incluye evaluacion riesgo y cambios en el flujo de previsado.</td>
+            <td>06/02/2018</td>
+        </tr>
+        <tr>
+            <td>1.20.0</td>
+            <td>Se agrega filtro por idFamilia en SP_BPM_LISTADO_OPORT_EXTEND. Corrección en patron fecha.</td>
+            <td>06/02/2018</td>
+        </tr>
+		<tr>
+            <td>1.19.0</td>
+            <td>Modificacion en validacion del estado anular por delay en respuesta de BPM</td>
+            <td>06/02/2018</td>
+        </tr>
+		<tr>
+            <td>1.18.0</td>
+            <td>Corrección de filtro de fechas en SP_BPM_LISTADO_OPORT_EXTEND</td>
+            <td>06/02/2018</td>
+        </tr>
+        <tr>
+            <td>1.17.0</td>
+            <td>Se eliminan columnas, procedimientos, e inserciones que no se van a utilizar</td>
+            <td>15/01/2018</td>
+        </tr>
+ 		<tr>
+            <td>1.17.0</td>
+            <td>Se incluye SP para busqueda de tarea actual</td>
+            <td>06/02/2018</td>
+        </tr>
+ 		<tr>
+            <td>1.16.0</td>
+            <td>Correccion lectura del mensaje del previsado </td>
+            <td>06/02/2018</td>
+        </tr>
+ 		<tr>
+            <td>1.15.0</td>
+            <td>Modificacion por nuevo estado de previsado </td>
+            <td>06/02/2018</td>
+        </tr>
+ 		<tr>
+            <td>1.14.0</td>
+            <td>Se incluye gestion de estados de la oportunidad y el producto </td>
+            <td>06/02/2018</td>
+        </tr>
+        <tr>
+            <td>1.13.1</td>
+            <td>se modifica estructura tabla documentos para asociar a oportunidad y no a productos.</td>
+            <td>06/02/2018</td>
+        </tr>
+        <tr>
+            <td>1.13.0</td>
+            <td>se añaden procedimientos para el debug de originacion (creacion-oportunidad) </td>
+            <td>06/02/2018</td>
+        </tr>
+        <tr>
+            <td>1.12.0</td>
+            <td>Se corrige SP que busca documentos </td>
+            <td>06/02/2018</td>
+        </tr>
+        <tr>
+            <td>1.11.0</td>
+            <td>Se corrige data de configuracion tabla BPM_TIPOS_AUTORIZACION </td>
+            <td>09/01/2018</td>
+        </tr>	      
+        <tr>
+            <td>1.10.0</td>
+            <td>Se corrige el paginado /td>
+            <td>09/01/2018</td>
+        </tr>	        
+        <tr>
+            <td>1.9.0</td>
+            <td>Se resuelve incidencia 3704, no se mostraban correctamente las oportunides historicoas /td>
+            <td>09/01/2018</td>
+        </tr>	    
+        <tr>
+            <td>1.8.0</td>
+            <td>Nueva configuracion autorizaciones, tabla de estados de oprtunidades y nuevo sp de listar oportunidades</td>
+            <td>09/01/2018</td>
+        </tr>
+        <tr>
+            <td>1.7.0</td>
+            <td>Se agrega tabla para registro documentos filenet. Mod. de SP_BPM_SOLICITUD_AUTORIZACION por Cta. Ahorro (Release 11).</td>
+            <td>29/12/2018</td>
+        </tr>
+        <tr>
+            <td>1.6.0</td>
+            <td>Release 10. Cuenta Corriente</td>
+            <td>12/12/2017</td>
+        </tr>
+        <tr>
+            <td>1.5.0</td>
+            <td>Se adecua logica para la solicitud de las autorizaciones.</td>
+            <td>07/11/2017</td>
+        </tr>
+        <tr>
+            <td>1.4.0</td>
+            <td>Se incluye nuevo campo en BPM_TAREAS para vincular las tareas con las autorizaciones</td>
+            <td>07/11/2017</td>
+        </tr>
+        <tr>
+            <td>1.3.2</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1.3.1</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1.3.0</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1.2.2</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1.2.1</td>
+            <td>Se incorporan datos para la configuracion de tareas y se implementa log de autorizaciones.</td>
+            <td>07/11/2017</td>
+        </tr>
+        <tr>
+            <td>1.2.0</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>1.0.0</td>
+            <td>Instalacion Modelo de Oportunidad.</td>
+            <td>07/11/2017</td>
+        </tr>
+    </tbody>
+</table>
+
+## Planes Bamboo en Desarrollo
+
+* [Build VENTA_CN](http://bamboo.bch.bancodechile.cl:8085/browse/TLDV-VTAB)
+
+## Planes Bamboo en QA
+
+* [Build VENTA_CN](http://bamboo.bch.bancodechile.cl:8085/browse/TQLB-BVTA)
+
+</body>

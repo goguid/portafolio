@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="SP_BPM_ACTUALIZA_DATOS_PREVIS" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="SP_BPM_ACTUALIZA_DATOS_PREVIS"/>
+			<item value="SP_BPM_ACT_DATOS_PREVIS_INTG"/>
+			<item value="SP_BPM_EMP_ACT_DAT_PREVIS_INTG"/>
+			<item value="SP_BPM_ACT_DATOS_PREVIS_INTG_5.37.0-1.1"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="385" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="523" key="DIALOG_HEIGHT"/>
+		<item value="779" key="DIALOG_X_ORIGIN"/>
+		<item value="167" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

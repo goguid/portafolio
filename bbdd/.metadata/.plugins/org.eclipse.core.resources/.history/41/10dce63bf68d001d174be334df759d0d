@@ -1,0 +1,1026 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="path-independent"
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <!-- Version 1.0.0 -->
+    <!-- Cargando TABLES -->
+    <include file="1.0.0/changelog-1.xml" relativeToChangelogFile="true" />
+    <!-- Cargando PROCEDURES-FUNCTIONS -->
+    <include file="1.0.0/changelog-2.xml" relativeToChangelogFile="true" />
+    <!-- Cargando TABLES -->
+    <include file="1.0.0/changelog-3.xml" relativeToChangelogFile="true" />
+    <!-- Cargando PROCEDURES-FUNCTIONS -->
+    <include file="1.0.0/changelog-4.xml" relativeToChangelogFile="true" />
+    <!-- Cargando DATA EN BPM_CATALOG_TAREAS -->
+    <include file="1.0.0/changelog-5.xml" relativeToChangelogFile="true" />
+    <!-- CREATE OR REPLACE SP ) -->
+    <include file="1.0.0/changelog-6.xml" relativeToChangelogFile="true" />
+    <!-- Carga nueva tarea en catalogo de tareas -->
+    <include file="1.0.0/changelog-7.xml" relativeToChangelogFile="true" />
+    <!-- ALTER TABLES -->
+    <include file="1.0.0/changelog-8.xml" relativeToChangelogFile="true" />
+    <!-- CREATE OR REPLACE SP  -->
+    <include file="1.0.0/changelog-9.xml" relativeToChangelogFile="true" />
+    <!-- ALTER TABLES -->
+    <include file="1.0.0/changelog-10.xml" relativeToChangelogFile="true" />
+    <!-- CREATE OR REPLACE SP -->
+    <include file="1.0.0/changelog-11.xml" relativeToChangelogFile="true" />
+    <!-- CREATE OR REPLACE SP -->
+    <include file="1.0.0/changelog-12.xml" relativeToChangelogFile="true" />
+    <!-- CREATE OR REPLACE SP -->
+    <include file="1.0.0/changelog-13.xml" relativeToChangelogFile="true" />
+    <!-- CREATE OR REPLACE SP -->
+    <include file="1.0.0/changelog-14.xml" relativeToChangelogFile="true" />
+    <!-- Compila Sps.  -->
+    <include file="1.0.0/changelog-15.xml" relativeToChangelogFile="true" />
+    <!-- Alter tables -->
+    <include file="1.0.0/changelog-16.xml" relativeToChangelogFile="true" />
+
+    <!-- Version 1.1.0 -->
+    <include file="1.1.0/changelog-1.xml" relativeToChangelogFile="true" />
+    <include file="1.1.0/changelog-2.xml" relativeToChangelogFile="true" />
+    <include file="1.1.0/changelog-3.xml" relativeToChangelogFile="true" />
+    <include file="1.1.0/changelog-4.xml" relativeToChangelogFile="true" />
+    <include file="1.1.0/changelog-5.xml" relativeToChangelogFile="true" />
+
+    <!-- Version 1.2.0 -->
+    <include file="1.2.0/changelog-1.xml" relativeToChangelogFile="true" />
+    <include file="1.2.0/changelog-2.xml" relativeToChangelogFile="true" />
+    <include file="1.2.0/changelog-3.xml" relativeToChangelogFile="true" />
+    <include file="1.2.0/changelog-4.xml" relativeToChangelogFile="true" />
+    <include file="1.2.0/changelog-5.xml" relativeToChangelogFile="true" />
+
+    <!-- Version 1.2.1 -->
+    <!-- Cargando Data -->
+    <include file="1.2.1/changelog-1.xml" relativeToChangelogFile="true" />
+    <!-- Create or Replace SP -->
+    <include file="1.2.1/changelog-2.xml" relativeToChangelogFile="true" />
+    <!-- Create Table BPM_LOGS_SERVICIOS -->
+    <include file="1.2.1/changelog-3.xml" relativeToChangelogFile="true" />
+    <!-- Create or Replace SPs -->
+    <include file="1.2.1/changelog-4.xml" relativeToChangelogFile="true" />
+    <!-- Cargando Data: Modifica e inserta en catalogo de tareas -->
+    <include file="1.2.1/changelog-5.xml" relativeToChangelogFile="true" />
+    <!-- Create or Replace SP_BPM_SOLICITUD_AUTORIZACION_1 -->
+    <include file="1.2.1/changelog-6.xml" relativeToChangelogFile="true" />
+    <!-- Modifica tipo de datos en tabla bpm_comentarios -->
+    <include file="1.2.1/changelog-7.xml" relativeToChangelogFile="true" />
+    <!-- Modifica tipo de dato en tabla bpm_logs_servicios-->
+    <include file="1.2.1/changelog-8.xml" relativeToChangelogFile="true" />
+
+    <!-- Corrección de sp que lista las oportunidades (no se cumplía el intervalo de 20 min) -->
+    <include file="1.2.2/changelog-1.xml" relativeToChangelogFile="true" />
+    <!-- Corrección de sp que lista las oportunidades (validación de intervalos de otra manera) -->
+    <include file="1.2.2/changelog-2.xml" relativeToChangelogFile="true" />
+    <!-- Se agregan las columnas rowowner y fecha modificacion a la tabla de estados -->
+    <include file="1.2.2/changelog-3.xml" relativeToChangelogFile="true" />
+    <!-- Se agrega JSON para representante legal -->
+    <include file="1.2.2/changelog-4.xml" relativeToChangelogFile="true" />
+    <!-- Se agrega JSON para representante legal -->
+    <include file="1.2.2/changelog-5.xml" relativeToChangelogFile="true" />
+    <!-- Se agrega agregan campos request y response a la tabla de estados -->
+    <include file="1.2.2/changelog-6.xml" relativeToChangelogFile="true" />
+
+    <!-- Version 1.3.0 -->
+    <include file="1.3.0/changelog-1.xml" relativeToChangelogFile="true" />
+    <include file="1.3.0/changelog-2.xml" relativeToChangelogFile="true" />
+    <include file="1.3.0/changelog-3.xml" relativeToChangelogFile="true" />
+    <include file="1.3.0/changelog-4.xml" relativeToChangelogFile="true" />
+
+    <!-- Version 1.3.1 -->
+    <include file="1.3.1/changelog-1.xml" relativeToChangelogFile="true" />
+    <include file="1.3.1/changelog-2.xml" relativeToChangelogFile="true" />
+    <include file="1.3.1/changelog-3.xml" relativeToChangelogFile="true" />
+
+    <!-- Version 1.3.2 -->
+    <!-- Se corrige la inserción de los json en la tabla de oportunidades -->
+    <include file="1.3.2/changelog-1.xml" relativeToChangelogFile="true" />
+
+    <!-- Version 1.4.0 -->
+    <!-- Agregando campo ID_AUTORIZACION a tabla BPM_TAREAS -->
+    <include file="1.4.0/changelog-1.xml" relativeToChangelogFile="true" />
+    <!-- Alter SP: SP_BPM_AGREGAR_TAREA campo ID_AUTORIZACION. Nvo SP: SP_BPM_LISTADO_OPORT_ALL -->
+    <include file="1.4.0/changelog-2.xml" relativeToChangelogFile="true" />
+
+    <!-- Version 1.5.0 -->
+    <!-- Se reduce  largo del codigo de autorizacion por restricciones en ambiente de produccion -->
+    <include file="1.5.0/changelog-1.xml" relativeToChangelogFile="true" />
+
+    <!-- Version 1.5.1 -->
+    <!-- Se realiza simulacion-->
+    <include file="1.5.1/changelog-1.xml" relativeToChangelogFile="true" />
+    <include file="1.5.1/changelog-2.xml" relativeToChangelogFile="true" />
+
+    <!-- Version 1.6.0 -->
+
+    <!-- Se crea tabla BPM_TIPOS_AUTORIZACION -->
+    <include file="1.6.0/changelog-2.xml" relativeToChangelogFile="true" />
+
+    <!-- Se actualiza procedimiento SP_BPM_SOLICITUD_AUTORIZACION -->
+    <include file="1.6.0/changelog-3.xml" relativeToChangelogFile="true" />
+
+    <!-- Se insertan registros en tabla BPM_TIPOS_AUTORIZACION -->
+    <include file="1.6.0/changelog-4.xml" relativeToChangelogFile="true" />
+
+    <!-- Se actualiza procedimiento SP_BPM_LISTADO_OPORT_ALL -->
+    <include file="1.6.0/changelog-5.xml" relativeToChangelogFile="true" />
+
+    <!-- Se actualizan procedimientos SP_BPM_ANULA_OPORTUNIDAD, SP_BPM_ANULAR_PRODUCTO, SP_BPM_LISTADO_PROD_INSTANCDS -->
+    <include file="1.6.0/changelog-6.xml" relativeToChangelogFile="true" />
+
+    <!-- Se crea columna referencias en tabla BPM_OPORTUNIDAD  -->
+    <include file="1.6.0/changelog-7.xml" relativeToChangelogFile="true" />
+
+    <!-- Se crea columna representantes legales en tabla BPM_OPERACIONES -->
+    <include file="1.6.0/changelog-8.xml" relativeToChangelogFile="true" />
+
+    <!-- Se crea procedimiento SP_BPM_ACTUALIZA_REFERENCIAS, se actualiza procedimiento SP_BPM_BUSCA_OPORTUNIDAD -->
+    <include file="1.6.0/changelog-9.xml" relativeToChangelogFile="true" />
+
+    <!-- Se crea procedimiento SP_BPM_ACT_REP_LEGAL_OPER y se actualizan procedimientos SP_BPM_BUSCA_PRODUCTO_BY_OPORT, SP_BPM_BUSCA_PRODUCTO -->
+    <include file="1.6.0/changelog-10.xml" relativeToChangelogFile="true" />
+
+    <!-- Se crea columna ACCIONES en tabla BPM_CATALOG_TAREAS -->
+    <include file="1.6.0/changelog-11.xml" relativeToChangelogFile="true" />
+
+    <!-- Se crea procedimiento SP_BPM_ACCIONES_X_TAREA_ID_BPM -->
+    <include file="1.6.0/changelog-12.xml" relativeToChangelogFile="true" />
+
+    <!-- Se actualiza campo GLS_TIPO_OPERACION en tabla BPM_TIPOS_AUTORIZACION-->
+    <include file="1.6.0/changelog-13.xml" relativeToChangelogFile="true" />
+
+    <!-- Se actualiza procedimiento SP_BPM_LISTADO_OPORT_ALL -->
+    <include file="1.6.0/changelog-14.xml" relativeToChangelogFile="true" />
+
+    <!-- Se actualiza procedimiento SP_BPM_BUSCA_OPORTUNIDAD -->
+    <include file="1.6.0/changelog-15.xml" relativeToChangelogFile="true" />
+
+    <!-- Nueva version Listado Oportunidad_ALL (incluye json productos)-->
+    <include file="1.6.0/changelog-16.xml" relativeToChangelogFile="true" />
+
+    <!-- Modif. SP Agregar tarea (se elimina nombre de tarea como entrada.)-->
+    <include file="1.6.0/changelog-17.xml" relativeToChangelogFile="true" />
+
+    <!-- Modif. SP Agregar tarea (se elimina nombre de tarea como entrada.)-->
+    <include file="1.6.0/changelog-18.xml" relativeToChangelogFile="true" />
+
+    <!-- Se agrega tabla para documentos filenet  -->
+    <include file="1.7.0/changelog-1.xml" relativeToChangelogFile="true" />
+
+    <!-- Se modifica SP SP_BPM_SOLICITUD_AUTORIZACION por Cta de Ahorro -->
+    <include file="1.7.0/changelog-2.xml" relativeToChangelogFile="true" />
+
+    <!-- Se crea la columna etapa_nombre en la tabla ejec de oportunidades, y se modifican los sp para poder utilizarla-->
+    <include file="1.7.0/changelog-3.xml" relativeToChangelogFile="true" />
+
+    <!-- Modificaciones para la integración del servicio de dominios.)-->
+    <include file="1.7.0/changelog-4.xml" relativeToChangelogFile="true" />
+
+    <!-- Modificaciones para guardar los datos  adicionales.)-->
+    <include file="1.7.0/changelog-5.xml" relativeToChangelogFile="true" />
+
+    <!-- Modificacion datos tabla de parametros BPM_TIPOS_AUTORIZACION -->
+    <include file="1.7.0/changelog-6.xml" relativeToChangelogFile="true" />
+
+    <include file="1.8.0/release-changelog-1.8.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.9.0/release-changelog-1.9.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.10.0/release-changelog-1.10.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.11.0/release-changelog-1.11.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.12.0/release-changelog-1.12.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.13.0/release-changelog-1.13.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.14.0/release-changelog-1.14.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.15.0/release-changelog-1.15.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.16.0/release-changelog-1.16.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.17.0/release-changelog-1.17.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.18.0/release-changelog-1.18.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.19.0/release-changelog-1.19.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.20.0/release-changelog-1.20.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.21.0/release-changelog-1.21.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.22.0/release-changelog-1.22.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.23.0/release-changelog-1.23.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.24.0/release-changelog-1.24.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.25.0/release-changelog-1.25.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.26.0/release-changelog-1.26.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.27.0/release-changelog-1.27.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.28.0/release-changelog-1.28.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.29.0/release-changelog-1.29.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.30.0/release-changelog-1.30.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.31.0/release-changelog-1.31.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.32.0/release-changelog-1.32.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.33.0/release-changelog-1.33.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.34.0/release-changelog-1.34.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.35.0/release-changelog-1.35.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.36.0/release-changelog-1.36.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.37.0/release-changelog-1.37.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.38.0/release-changelog-1.38.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.39.0/release-changelog-1.39.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.40.0/release-changelog-1.40.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.41.0/release-changelog-1.41.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.42.0/release-changelog-1.42.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.43.0/release-changelog-1.43.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.43.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.44.0/release-changelog-1.44.0.xml" relativeToChangelogFile="true" />
+
+    <include file="1.45.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.46.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.47.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.48.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.49.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.50.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.51.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.52.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.53.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.54.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.55.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.56.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.57.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.58.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.59.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.60.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.61.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.62.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.63.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.64.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.65.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.66.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.67.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.68.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.69.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.70.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.71.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.72.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.73.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.74.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.75.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.76.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.77.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.78.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.79.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.80.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.81.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.82.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.83.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.84.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.85.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.86.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.86.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.86.2/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.87.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.88.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.89.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.90.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.91.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.92.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.93.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.94.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.95.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.96.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.97.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.98.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.99.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.100.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.101.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.102.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.103.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.104.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.105.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.106.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.107.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.108.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="1.109.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.0.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.1.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.2.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <!-- Se salta release por certificación incorrectaa -->
+    <!--<include file="2.3.0/release-changelog.xml" relativeToChangelogFile="true" />-->
+
+    <include file="2.4.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.5.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.6.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.7.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.8.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.9.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.10.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.11.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.12.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.13.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.14.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.15.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.16.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.17.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.18.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.19.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.20.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.21.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.22.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.23.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.24.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.25.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.26.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.27.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.28.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.29.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.30.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.31.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.32.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.33.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.34.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.35.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.36.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.37.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.38.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.39.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.40.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.41.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.42.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.43.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.44.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.45.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.46.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.47.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.48.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.49.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.50.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.51.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.51.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.52.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.53.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.54.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.55.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.56.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.61.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.61.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.62.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.63.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.64.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.65.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.66.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.67.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.68.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.69.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.70.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.71.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.72.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.73.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.74.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.75.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.76.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.77.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.78.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.79.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.79.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.80.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.81.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.82.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.83.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.83.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.83.2/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.83.3/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.84.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.85.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.85.1/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="2.86.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.87.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.88.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.89.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.90.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.91.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.92.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.93.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.94.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.95.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.96.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.97.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.98.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.98.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.98.2/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="2.99.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.0.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.1.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.2.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.3.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.4.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.5.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.6.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.7.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.8.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.9.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.10.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.11.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.12.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.13.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.14.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.15.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.15.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.15.2/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.15.3/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.16.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.17.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.18.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.19.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.19.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.20.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.21.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.22.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.23.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.24.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.25.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.26.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.27.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.28.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.29.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.30.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.31.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.32.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.33.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.34.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.35.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.36.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.37.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.38.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.39.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.39.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.40.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.41.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.42.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.43.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.44.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.45.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.46.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.47.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.48.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.48.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.49.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.50.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.51.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.52.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.53.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.54.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.54.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.55.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.56.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.57.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.58.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.59.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.60.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.61.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.61.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.62.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.63.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.64.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.65.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.66.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.67.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.68.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.69.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.70.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.71.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.72.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.73.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.74.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.75.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.76.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.77.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.78.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.79.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.80.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.81.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.81.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.82.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.83.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.83.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.84.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.85.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.86.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.87.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.87.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.88.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.89.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.90.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.91.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.91.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.92.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.93.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.94.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.95.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.96.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.97.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.98.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.98.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="3.99.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.0.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.1.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.2.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.3.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.4.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.5.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.6.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+	<include file="4.7.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.7.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.8.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.9.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.10.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.11.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.12.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.13.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.14.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.15.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.16.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.17.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.18.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.19.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.20.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.21.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.22.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.23.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.24.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <!--4.24.1: En Procedimiento SP_GET_TD_FAN_EMBOZADO_V2, se agrega índice por etiqueta '$.listaProductos.nroFolio' y se optimiza consulta - Incidente CIP-3294 -->
+    <include file="4.24.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.25.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.26.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.27.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.28.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.29.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.30.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <!-- CIP-3379 Se corrige SP_GET_TD_FAN_EMBOZADO_V2 para que tome la etiqueta de segunda consulta por '$.listaProductos[*].atributos[*]'. -->
+    <include file="4.30.1/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <!-- CIP-2961 Crea SP_OPORTUNIDAD_CONF_BUSCAR_V2, SP_OPORTUNIDAD_REINTENTO_FEAV2, SP_OPORTUNIDADES_ERROR_ORIG_V2, SP_OP_RE_GES_ERR_DAT_FEA_REM. -->
+    <include file="4.30.2/release-changelog.xml" relativeToChangelogFile="true" />
+
+	<!-- APC-16984 - Se crear FUNCTION FN_VNT_PYD_IDOPORTUNIDAD,SEQUENCE ISEQ_PYD_IDOPORTUNIDAD_E  y SEQUENCE ISEQ_PYD_IDOPORTUNIDAD_P  -->
+    <include file="4.31.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+	<include file="4.32.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.33.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.34.0/release-changelog.xml" relativeToChangelogFile="true" />
+
+    <include file="4.35.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.37.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.38.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.38.1/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.39.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.40.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <!--4.40.2: Se crea Columna Virtual BPM_TAREAS.USUARIO_RUT e Índices en Tablas BPM_TAREAS, BPM_OPERACIONES y BPM_OPORTUNIDAD - Incidente CIP-3270 -->
+    <include file="4.40.2/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.41.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.42.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.43.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.44.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.45.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.46.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.47.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.48.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.49.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.50.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.51.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.52.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.53.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.54.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <!--4.54.1: Actualizacion de oficina - Incidente CIP-3617 -->
+    <include file="4.54.1/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.55.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.56.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.57.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.58.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <!--4.58.1: Actualización oficina de autorización de la oportunidad - Incidente CIP-3665 -->
+    <include file="4.58.1/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.59.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.60.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.61.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.62.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.63.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.64.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.65.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.66.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.67.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.68.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.69.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.70.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.71.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.72.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.73.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.74.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.75.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.76.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.77.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.78.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.79.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.80.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.81.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.82.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.83.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.84.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.85.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.86.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.87.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.88.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.89.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.90.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.90.1/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.91.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.92.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.93.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.94.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.95.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <!--CIP-3957 Anulacion de oportunidad sin tareas -->
+    <include file="4.95.1/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.96.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.97.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.98.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="4.99.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.0.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.1.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.2.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.3.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.4.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.5.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.6.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.7.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.8.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.9.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.10.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.11.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.12.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.13.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.14.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.15.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.16.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.17.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.18.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.19.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.20.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.21.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.22.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.23.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.24.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.25.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.26.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.27.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.28.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.29.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.30.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.31.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.32.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.33.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.34.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.35.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="5.36.0/release-changelog.xml" relativeToChangelogFile="true" />
+    <include file="compile_schema.xml" relativeToChangelogFile="true"/>
+</databaseChangeLog>
